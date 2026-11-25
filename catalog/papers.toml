@@ -1,0 +1,2127 @@
+# The papers of this hub, one [[paper]] per repository to be, grouped by family of methods: the
+# estimation of sequence alignments and of homology, the models of insertion and deletion, and the
+# joint estimation of alignments and trees.
+#
+# Started on 2026-11-25 from the maintainer's list. Authors, years, titles and links are the list's,
+# checked against Crossref, which gave the links that the list lacked. Each formalization records the
+# exact citation in its Phase 0, and corrects the entry here. Sankoff (1975), Minimal Mutation Trees of
+# Sequences, which the list places in family 8, is in the catalog of lean4-phylo-gene-tree (family 3),
+# since a paper is in one catalog.
+#
+# Fields of a paper:
+#   id          the repository is lean4-<id>: the method's name in lower case when the paper names
+#               one, otherwise first author and year, with a keyword when two papers would share it
+#   family      the [[family]] it belongs to (each paper is in exactly one)
+#   order       its place in the family, by priority
+#   short       the method's name, when it has one
+#   kind        "theory" (an identifiability, consistency, complexity or characterization theorem),
+#               "theory+algorithm", "method", "evaluation" (a study of methods on data, with
+#               definitions or claims worth formalizing), "method+evaluation" or "theory+evaluation"
+#   root        the Lean package, the root of its code and, by default, the paper's name: the
+#               method's name, otherwise first author and year (lean4-phylogenetics'
+#               docs/CONVENTIONS.md, Section 2)
+#   paper       optional: the paper's name, when it is not the root (CONVENTIONS, Section 2)
+#   status      "todo", "partial" (some results are formalized elsewhere: see covered_by),
+#               "in-progress" (its repository exists), or "formalized"
+#   repo        only when the repository is not named lean4-<id>, as for papers on one topic that
+#               share a repository (CONVENTIONS, Section 3)
+#   commit      for a formalized paper: the commit that other repositories require
+#   uses        other hubs whose library its formalization requires, besides this one
+#   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
+#               before the paper's inventory; its Phase 1 completes the list here
+#   covered_by  what is already formalized, and where
+#   note        anything else
+
+[[family]]
+id = 1
+title = "Divide-and-conquer alignment and scalable phylogenetic co-estimation"
+priority = "highest"
+
+[[family]]
+id = 2
+title = "Profile HMM ensembles, backbone alignment and fragmentary sequences"
+priority = "highest"
+
+[[family]]
+id = 3
+title = "Statistical alignment, evolutionary indel models and identifiability"
+priority = "high"
+
+[[family]]
+id = 4
+title = "Phylogeny-aware alignment and joint statistical estimation"
+priority = "high"
+
+[[family]]
+id = 5
+title = "Progressive alignment and iterative refinement"
+priority = "high"
+
+[[family]]
+id = 6
+title = "Consistency-based, posterior-probability and graph-based alignment"
+priority = "high"
+
+[[family]]
+id = 7
+title = "Pairwise alignment and dynamic programming foundations"
+priority = "foundational"
+
+[[family]]
+id = 8
+title = "Exact multiple alignment, computational complexity and approximation algorithms"
+priority = "high"
+
+[[family]]
+id = 9
+title = "Alignment uncertainty, consensus, accuracy metrics and filtering"
+priority = "high"
+
+[[family]]
+id = 10
+title = "Statistical limitations and the impact of alignment on phylogenetic inference"
+priority = "high"
+
+[[family]]
+id = 11
+title = "RNA, codon and structure-aware alignment"
+priority = "secondary"
+
+[[family]]
+id = 12
+title = "Machine learning and learned statistical alignment models"
+priority = "emerging"
+
+# ---------------------------------------------------------------------------------------------
+# 1. Divide-and-conquer alignment and scalable phylogenetic co-estimation
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "sate"
+family = 1
+order = 1
+short = "SATé"
+authors = "Liu et al."
+year = "2009"
+title = "SATé: Rapid and Accurate Large-Scale Coestimation of Sequence Alignments and Phylogenetic Trees"
+url = "https://doi.org/10.1126/science.1171243"
+kind = "method"
+root = "Sate"
+status = "todo"
+
+[[paper]]
+id = "sate-ii"
+family = 1
+order = 2
+short = "SATé-II"
+authors = "Liu et al."
+year = "2012"
+title = "SATé-II: Very Fast and Accurate Simultaneous Estimation of Multiple Sequence Alignments and Phylogenetic Trees"
+url = "https://doi.org/10.1093/sysbio/syr095"
+kind = "method"
+root = "SateII"
+status = "todo"
+builds_on = ["sate"]
+
+[[paper]]
+id = "pasta"
+family = 1
+order = 3
+short = "PASTA"
+authors = "Mirarab et al."
+year = "2015"
+title = "PASTA: Ultra-Large Multiple Sequence Alignment for Nucleotide and Amino-Acid Sequences"
+url = "https://doi.org/10.1089/cmb.2014.0156"
+kind = "method"
+root = "Pasta"
+status = "todo"
+builds_on = ["sate-ii"]
+
+[[paper]]
+id = "nute2016"
+family = 1
+order = 4
+authors = "Nute, Warnow"
+year = "2016"
+title = "Scaling Statistical Multiple Sequence Alignment to Large Datasets"
+url = "https://doi.org/10.1186/s12864-016-3101-8"
+kind = "method"
+root = "Nute2016"
+status = "todo"
+builds_on = ["pasta", "bali-phy"]
+
+[[paper]]
+id = "garriga2019"
+family = 1
+order = 5
+authors = "Garriga et al."
+year = "2019"
+title = "Large Multiple Sequence Alignments with a Root-to-Leaf Regressive Method"
+url = "https://doi.org/10.1038/s41587-019-0333-6"
+kind = "method"
+root = "Garriga2019"
+status = "todo"
+
+[[paper]]
+id = "magus"
+family = 1
+order = 6
+short = "MAGUS"
+authors = "Smirnov, Warnow"
+year = "2021"
+title = "MAGUS: Multiple Sequence Alignment Using Graph Clustering"
+url = "https://doi.org/10.1093/bioinformatics/btaa992"
+kind = "method"
+root = "Magus"
+status = "todo"
+
+[[paper]]
+id = "gupta2021"
+family = 1
+order = 7
+authors = "Gupta, Zaharias, Warnow"
+year = "2021"
+title = "Accurate Large-Scale Phylogeny-Aware Alignment Using BAli-Phy"
+url = "https://doi.org/10.1093/bioinformatics/btab555"
+kind = "method"
+root = "Gupta2021"
+status = "todo"
+builds_on = ["bali-phy"]
+
+[[paper]]
+id = "recursive-magus"
+family = 1
+order = 8
+short = "Recursive MAGUS"
+authors = "Smirnov"
+year = "2021"
+title = "Recursive MAGUS: Scalable and Accurate Multiple Sequence Alignment"
+url = "https://doi.org/10.1371/journal.pcbi.1008950"
+kind = "method"
+root = "RecursiveMagus"
+status = "todo"
+builds_on = ["magus"]
+
+# ---------------------------------------------------------------------------------------------
+# 2. Profile HMM ensembles, backbone alignment and fragmentary sequences
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "krogh1994"
+family = 2
+order = 1
+authors = "Krogh et al."
+year = "1994"
+title = "Hidden Markov Models in Computational Biology: Applications to Protein Modeling"
+url = "https://doi.org/10.1006/jmbi.1994.1104"
+kind = "theory+algorithm"
+root = "Krogh1994"
+status = "todo"
+
+[[paper]]
+id = "eddy1998"
+family = 2
+order = 2
+authors = "Eddy"
+year = "1998"
+title = "Profile Hidden Markov Models"
+url = "https://doi.org/10.1093/bioinformatics/14.9.755"
+kind = "theory"
+root = "Eddy1998"
+status = "todo"
+
+[[paper]]
+id = "eddy2011"
+family = 2
+order = 3
+authors = "Eddy"
+year = "2011"
+title = "Accelerated Profile HMM Searches"
+url = "https://doi.org/10.1371/journal.pcbi.1002195"
+kind = "method"
+root = "Eddy2011"
+status = "todo"
+
+[[paper]]
+id = "papara"
+family = 2
+order = 4
+short = "PaPaRa"
+authors = "Berger, Stamatakis"
+year = "2011"
+title = "PaPaRa: Aligning Short Reads to Reference Alignments and Trees"
+url = "https://doi.org/10.1093/bioinformatics/btr320"
+kind = "method"
+root = "PaPaRa"
+status = "todo"
+
+[[paper]]
+id = "katoh2012"
+family = 2
+order = 5
+authors = "Katoh, Frith"
+year = "2012"
+title = "Adding Unaligned Sequences into an Existing Alignment Using MAFFT and LAST"
+url = "https://doi.org/10.1093/bioinformatics/bts578"
+kind = "method"
+root = "Katoh2012"
+status = "todo"
+
+[[paper]]
+id = "upp"
+family = 2
+order = 6
+short = "UPP"
+authors = "Nguyen et al."
+year = "2015"
+title = "UPP: Ultra-Large Alignments Using Phylogeny-Aware Profiles"
+url = "https://doi.org/10.1186/s13059-015-0688-z"
+kind = "method"
+root = "Upp"
+status = "todo"
+
+[[paper]]
+id = "magus-ehmms"
+family = 2
+order = 7
+short = "MAGUS+eHMMs"
+authors = "Shen, Zaharias, Warnow"
+year = "2022"
+title = "MAGUS+eHMMs: Improved Multiple Sequence Alignment Accuracy for Fragmentary Sequences"
+url = "https://doi.org/10.1093/bioinformatics/btab788"
+kind = "method"
+root = "MagusEhmms"
+status = "todo"
+builds_on = ["magus", "upp"]
+
+[[paper]]
+id = "witch"
+family = 2
+order = 8
+short = "WITCH"
+authors = "Shen, Park, Warnow"
+year = "2022"
+title = "WITCH: Improved Multiple Sequence Alignment Through Weighted Consensus Hidden Markov Model Alignment"
+url = "https://doi.org/10.1089/cmb.2021.0585"
+kind = "method"
+root = "Witch"
+status = "todo"
+builds_on = ["upp", "magus"]
+
+[[paper]]
+id = "upp2"
+family = 2
+order = 9
+short = "UPP2"
+authors = "Park et al."
+year = "2023"
+title = "UPP2: Fast and Accurate Alignment of Datasets with Fragmentary Sequences"
+url = "https://doi.org/10.1093/bioinformatics/btad007"
+kind = "method"
+root = "Upp2"
+status = "todo"
+builds_on = ["upp"]
+
+[[paper]]
+id = "witch-ng"
+family = 2
+order = 10
+short = "WITCH-NG"
+authors = "Liu, Warnow"
+year = "2023"
+title = "WITCH-NG: Efficient and Accurate Alignment of Datasets with Sequence Length Heterogeneity"
+url = "https://doi.org/10.1093/bioadv/vbad024"
+kind = "theory+algorithm"
+root = "WitchNg"
+status = "todo"
+builds_on = ["witch"]
+note = "It replaces a heuristic optimization step of WITCH with an exact polynomial-time algorithm."
+
+[[paper]]
+id = "hmmerge"
+family = 2
+order = 11
+short = "HMMerge"
+authors = "Park, Warnow"
+year = "2023"
+title = "HMMerge: An Ensemble Method for Multiple Sequence Alignment"
+url = "https://doi.org/10.1093/bioadv/vbad052"
+kind = "method"
+root = "HmmMerge"
+status = "todo"
+builds_on = ["upp"]
+
+[[paper]]
+id = "emma"
+family = 2
+order = 12
+short = "EMMA"
+authors = "Shen et al."
+year = "2023"
+title = "EMMA: A New Method for Computing Multiple Sequence Alignments Given a Constraint Subset Alignment"
+url = "https://doi.org/10.1186/s13015-023-00247-x"
+kind = "method"
+root = "Emma"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 3. Statistical alignment, evolutionary indel models and identifiability
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "thorne1991"
+family = 3
+order = 1
+short = "TKF91"
+authors = "Thorne, Kishino, Felsenstein"
+year = "1991"
+title = "An Evolutionary Model for Maximum Likelihood Alignment of DNA Sequences (TKF91)"
+url = "https://doi.org/10.1007/BF02193625"
+kind = "theory+algorithm"
+root = "Thorne1991"
+status = "todo"
+
+[[paper]]
+id = "thorne1992"
+family = 3
+order = 2
+short = "TKF92"
+authors = "Thorne, Kishino, Felsenstein"
+year = "1992"
+title = "Inching Toward Reality: An Improved Likelihood Model of Sequence Evolution (TKF92)"
+url = "https://doi.org/10.1007/BF00163848"
+kind = "theory+algorithm"
+root = "Thorne1992"
+status = "todo"
+builds_on = ["thorne1991"]
+
+[[paper]]
+id = "hein2000"
+family = 3
+order = 3
+authors = "Hein et al."
+year = "2000"
+title = "Statistical Alignment: Computational Properties, Homology Testing and Goodness-of-Fit"
+url = "https://doi.org/10.1006/jmbi.2000.4061"
+kind = "theory"
+root = "Hein2000"
+status = "todo"
+builds_on = ["thorne1991"]
+
+[[paper]]
+id = "steel2001"
+family = 3
+order = 4
+authors = "Steel, Hein"
+year = "2001"
+title = "Applying the Thorne–Kishino–Felsenstein Model to Sequence Evolution on a Star-Shaped Tree"
+url = "https://doi.org/10.1016/S0893-9659(01)80026-4"
+kind = "theory+algorithm"
+root = "Steel2001"
+status = "todo"
+builds_on = ["thorne1991"]
+
+[[paper]]
+id = "hein2001"
+family = 3
+order = 5
+authors = "Hein"
+year = "2001"
+title = "An Algorithm for Statistical Alignment of Sequences Related by a Binary Tree"
+url = "https://doi.org/10.1142/9789814447362_0019"
+kind = "theory+algorithm"
+root = "Hein2001"
+status = "todo"
+builds_on = ["thorne1991"]
+
+[[paper]]
+id = "holmes2001"
+family = 3
+order = 6
+authors = "Holmes, Bruno"
+year = "2001"
+title = "Evolutionary HMMs: A Bayesian Approach to Multiple Alignment"
+url = "https://doi.org/10.1093/bioinformatics/17.9.803"
+kind = "theory+algorithm"
+root = "Holmes2001"
+status = "todo"
+
+[[paper]]
+id = "lunter2003"
+family = 3
+order = 7
+authors = "Lunter et al."
+year = "2003"
+title = "An Efficient Algorithm for Statistical Multiple Alignment on Arbitrary Phylogenetic Trees"
+url = "https://doi.org/10.1089/106652703322756122"
+kind = "theory+algorithm"
+root = "Lunter2003"
+status = "todo"
+builds_on = ["thorne1991"]
+
+[[paper]]
+id = "miklos2004"
+family = 3
+order = 8
+authors = "Miklós, Lunter, Holmes"
+year = "2004"
+title = "A Long Indel Model for Evolutionary Sequence Alignment"
+url = "https://doi.org/10.1093/molbev/msh043"
+kind = "theory+algorithm"
+root = "Miklos2004"
+status = "todo"
+
+[[paper]]
+id = "thatte2006"
+family = 3
+order = 9
+authors = "Thatte"
+year = "2006"
+title = "Invertibility of the TKF Model of Sequence Evolution"
+url = "https://doi.org/10.1016/j.mbs.2005.12.025"
+kind = "theory"
+root = "Thatte2006"
+status = "todo"
+builds_on = ["thorne1991"]
+note = "With Fan, Legried, Roch 2020 (fan2020): the identifiability of the TKF91 model and the consistent estimation of distances from ever longer sequences are different properties."
+
+[[paper]]
+id = "rivas2008"
+family = 3
+order = 10
+authors = "Rivas, Eddy"
+year = "2008"
+title = "Probabilistic Phylogenetic Inference with Insertions and Deletions"
+url = "https://doi.org/10.1371/journal.pcbi.1000172"
+kind = "theory+algorithm"
+root = "Rivas2008"
+status = "todo"
+
+[[paper]]
+id = "andoni2010"
+family = 3
+order = 11
+authors = "Andoni et al."
+year = "2010"
+title = "Global Alignment of Molecular Sequences via Ancestral State Reconstruction"
+url = "https://hdl.handle.net/1721.1/74010"
+kind = "theory+algorithm"
+root = "Andoni2010"
+status = "todo"
+note = "In Innovations in Computer Science 2010, with no DOI: the link is the paper in MIT's repository. The journal version is Stochastic Processes and their Applications 122 (2012) 3852–3874 (https://doi.org/10.1016/j.spa.2012.08.004)."
+
+[[paper]]
+id = "westesson2012"
+family = 3
+order = 12
+authors = "Westesson et al."
+year = "2012"
+title = "Accurate Reconstruction of Insertion–Deletion Histories by Statistical Phylogenetics"
+url = "https://doi.org/10.1371/journal.pone.0034572"
+kind = "theory+algorithm"
+root = "Westesson2012"
+status = "todo"
+
+[[paper]]
+id = "pip"
+family = 3
+order = 13
+short = "PIP"
+authors = "Bouchard-Côté, Jordan"
+year = "2013"
+title = "Evolutionary Inference via the Poisson Indel Process (PIP)"
+url = "https://doi.org/10.1073/pnas.1220450110"
+kind = "theory+algorithm"
+root = "Pip"
+status = "todo"
+
+[[paper]]
+id = "fan2020"
+family = 3
+order = 14
+authors = "Fan, Legried, Roch"
+year = "2020"
+title = "Impossibility of Consistent Distance Estimation from Sequence Lengths Under the TKF91 Model"
+url = "https://doi.org/10.1007/s11538-020-00801-3"
+kind = "theory"
+root = "Fan2020"
+status = "todo"
+builds_on = ["thorne1991"]
+note = "With Thatte 2006 (thatte2006): the identifiability of the TKF91 model and the consistent estimation of distances from ever longer sequences are different properties."
+
+[[paper]]
+id = "demaio2021"
+family = 3
+order = 15
+authors = "De Maio"
+year = "2021"
+title = "The Cumulative Indel Model: Fast and Accurate Statistical Evolutionary Alignment"
+url = "https://doi.org/10.1093/sysbio/syaa050"
+kind = "theory+algorithm"
+root = "DeMaio2021"
+status = "todo"
+
+[[paper]]
+id = "xue2026"
+family = 3
+order = 16
+authors = "Xue, Legried, Fan"
+year = "2026"
+title = "Joint Identifiability of Ancestral Sequence, Phylogeny, and Mutation Rates Under an Indel Model"
+url = "https://doi.org/10.1177/15578666261504447"
+kind = "theory+algorithm"
+root = "Xue2026"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 4. Phylogeny-aware alignment and joint statistical estimation
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "hein1990"
+family = 4
+order = 1
+authors = "Hein"
+year = "1990"
+title = "Unified Approach to Alignment and Phylogenies"
+url = "https://doi.org/10.1016/0076-6879(90)83041-7"
+kind = "method"
+root = "Hein1990"
+status = "todo"
+
+[[paper]]
+id = "wheeler1996"
+family = 4
+order = 2
+authors = "Wheeler"
+year = "1996"
+title = "Optimization Alignment: The End of Multiple Sequence Alignment in Phylogenetics?"
+url = "https://doi.org/10.1111/j.1096-0031.1996.tb00189.x"
+kind = "method"
+root = "Wheeler1996"
+status = "todo"
+
+[[paper]]
+id = "satchmo"
+family = 4
+order = 3
+short = "SATCHMO"
+authors = "Edgar, Sjölander"
+year = "2003"
+title = "SATCHMO: Sequence Alignment and Tree Construction Using Hidden Markov Models"
+url = "https://doi.org/10.1093/bioinformatics/btg158"
+kind = "method"
+root = "Satchmo"
+status = "todo"
+
+[[paper]]
+id = "loytynoja2005"
+family = 4
+order = 4
+authors = "Löytynoja, Goldman"
+year = "2005"
+title = "An Algorithm for Progressive Multiple Alignment of Sequences with Insertions"
+url = "https://doi.org/10.1073/pnas.0409137102"
+kind = "method"
+root = "Loytynoja2005"
+status = "todo"
+
+[[paper]]
+id = "redelings2005"
+family = 4
+order = 5
+authors = "Redelings, Suchard"
+year = "2005"
+title = "Joint Bayesian Estimation of Alignment and Phylogeny"
+url = "https://doi.org/10.1080/10635150590947041"
+kind = "method"
+root = "Redelings2005"
+status = "todo"
+
+[[paper]]
+id = "lunter2005"
+family = 4
+order = 6
+authors = "Lunter et al."
+year = "2005"
+title = "Bayesian Coestimation of Phylogeny and Sequence Alignment"
+url = "https://doi.org/10.1186/1471-2105-6-83"
+kind = "method"
+root = "Lunter2005"
+status = "todo"
+
+[[paper]]
+id = "fleissner2005"
+family = 4
+order = 7
+authors = "Fleissner, Metzler, von Haeseler"
+year = "2005"
+title = "Simultaneous Statistical Multiple Alignment and Phylogeny Reconstruction"
+url = "https://doi.org/10.1080/10635150590950371"
+kind = "method"
+root = "Fleissner2005"
+status = "todo"
+
+[[paper]]
+id = "bali-phy"
+family = 4
+order = 8
+short = "BAli-Phy"
+authors = "Suchard, Redelings"
+year = "2006"
+title = "BAli-Phy: Simultaneous Bayesian Inference of Alignment and Phylogeny"
+url = "https://doi.org/10.1093/bioinformatics/btl175"
+kind = "method"
+root = "BaliPhy"
+status = "todo"
+builds_on = ["redelings2005"]
+
+[[paper]]
+id = "redelings2007"
+family = 4
+order = 9
+authors = "Redelings, Suchard"
+year = "2007"
+title = "Incorporating Indel Information into Phylogeny Estimation for Rapidly Emerging Pathogens"
+url = "https://doi.org/10.1186/1471-2148-7-40"
+kind = "method"
+root = "Redelings2007"
+status = "todo"
+
+[[paper]]
+id = "prank"
+family = 4
+order = 10
+short = "PRANK"
+authors = "Löytynoja, Goldman"
+year = "2008"
+title = "PRANK: Phylogeny-Aware Gap Placement Prevents Errors in Sequence Alignment and Evolutionary Analysis"
+url = "https://doi.org/10.1126/science.1158395"
+kind = "method"
+root = "Prank"
+status = "todo"
+builds_on = ["loytynoja2005"]
+
+[[paper]]
+id = "loytynoja2008"
+family = 4
+order = 11
+authors = "Löytynoja, Goldman"
+year = "2008"
+title = "A Model of Evolution and Structure for Multiple Sequence Alignment"
+url = "https://doi.org/10.1098/rstb.2008.0170"
+kind = "theory+algorithm"
+root = "Loytynoja2008"
+status = "todo"
+
+[[paper]]
+id = "statalign"
+family = 4
+order = 12
+short = "StatAlign"
+authors = "Novák et al."
+year = "2008"
+title = "StatAlign: An Extendable Software Package for Joint Bayesian Estimation of Alignments and Evolutionary Trees"
+url = "https://doi.org/10.1093/bioinformatics/btn457"
+kind = "method"
+root = "StatAlign"
+status = "todo"
+
+[[paper]]
+id = "poy4"
+family = 4
+order = 13
+short = "POY 4"
+authors = "Varón, Vinh, Wheeler"
+year = "2010"
+title = "POY Version 4: Phylogenetic Analysis Using Dynamic Homologies"
+url = "https://doi.org/10.1111/j.1096-0031.2009.00282.x"
+kind = "method"
+root = "Poy4"
+status = "todo"
+
+[[paper]]
+id = "pagan"
+family = 4
+order = 14
+short = "PAGAN"
+authors = "Löytynoja, Vilella, Goldman"
+year = "2012"
+title = "PAGAN: Accurate Extension of Multiple Sequence Alignments Using a Phylogeny-Aware Graph Algorithm"
+url = "https://doi.org/10.1093/bioinformatics/bts198"
+kind = "method"
+root = "Pagan"
+status = "todo"
+
+[[paper]]
+id = "redelings2014"
+family = 4
+order = 15
+authors = "Redelings"
+year = "2014"
+title = "Erasing Errors Due to Alignment Ambiguity When Estimating Positive Selection"
+url = "https://doi.org/10.1093/molbev/msu174"
+kind = "method"
+root = "Redelings2014"
+status = "todo"
+
+[[paper]]
+id = "maiolo2018"
+family = 4
+order = 16
+authors = "Maiolo et al."
+year = "2018"
+title = "Progressive Multiple Sequence Alignment with Indel Evolution"
+url = "https://doi.org/10.1186/s12859-018-2357-1"
+kind = "theory+algorithm"
+root = "Maiolo2018"
+status = "todo"
+builds_on = ["pip"]
+
+[[paper]]
+id = "bali-phy3"
+family = 4
+order = 17
+short = "BAli-Phy 3"
+authors = "Redelings"
+year = "2021"
+title = "BAli-Phy Version 3: Model-Based Co-Estimation of Alignment and Phylogeny"
+url = "https://doi.org/10.1093/bioinformatics/btab129"
+kind = "method"
+root = "BaliPhy3"
+status = "todo"
+builds_on = ["bali-phy"]
+
+[[paper]]
+id = "propip"
+family = 4
+order = 18
+short = "ProPIP"
+authors = "Maiolo et al."
+year = "2021"
+title = "ProPIP: A Tool for Progressive Multiple Sequence Alignment with Poisson Indel Process"
+url = "https://doi.org/10.1186/s12859-021-04442-8"
+kind = "method"
+root = "ProPip"
+status = "todo"
+builds_on = ["maiolo2018"]
+
+# ---------------------------------------------------------------------------------------------
+# 5. Progressive alignment and iterative refinement
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "hogeweg1984"
+family = 5
+order = 1
+authors = "Hogeweg, Hesper"
+year = "1984"
+title = "The Alignment of Sets of Sequences and the Construction of Phyletic Trees: An Integrated Method"
+url = "https://doi.org/10.1007/BF02257378"
+kind = "method"
+root = "Hogeweg1984"
+status = "todo"
+
+[[paper]]
+id = "barton1987"
+family = 5
+order = 2
+authors = "Barton, Sternberg"
+year = "1987"
+title = "A Strategy for the Rapid Multiple Alignment of Protein Sequences"
+url = "https://doi.org/10.1016/0022-2836(87)90316-0"
+kind = "method"
+root = "Barton1987"
+status = "todo"
+
+[[paper]]
+id = "feng1987"
+family = 5
+order = 3
+authors = "Feng, Doolittle"
+year = "1987"
+title = "Progressive Sequence Alignment as a Prerequisite to Correct Phylogenetic Trees"
+url = "https://doi.org/10.1007/BF02603120"
+kind = "method"
+root = "Feng1987"
+status = "todo"
+
+[[paper]]
+id = "clustal"
+family = 5
+order = 4
+short = "CLUSTAL"
+authors = "Higgins, Sharp"
+year = "1988"
+title = "CLUSTAL: A Package for Performing Multiple Sequence Alignment on a Microcomputer"
+url = "https://doi.org/10.1016/0378-1119(88)90330-7"
+kind = "method"
+root = "Clustal"
+status = "todo"
+
+[[paper]]
+id = "corpet1988"
+family = 5
+order = 5
+short = "MultAlin"
+authors = "Corpet"
+year = "1988"
+title = "Multiple Sequence Alignment with Hierarchical Clustering (MultAlin)"
+url = "https://doi.org/10.1093/nar/16.22.10881"
+kind = "method"
+root = "Corpet1988"
+status = "todo"
+
+[[paper]]
+id = "gotoh1993"
+family = 5
+order = 6
+authors = "Gotoh"
+year = "1993"
+title = "Optimal Alignment Between Groups of Sequences and Its Application to Multiple Sequence Alignment"
+url = "https://doi.org/10.1093/bioinformatics/9.3.361"
+kind = "theory+algorithm"
+root = "Gotoh1993"
+status = "todo"
+
+[[paper]]
+id = "clustalw"
+family = 5
+order = 7
+short = "CLUSTAL W"
+authors = "Thompson, Higgins, Gibson"
+year = "1994"
+title = "CLUSTAL W: Improving the Sensitivity of Progressive Multiple Sequence Alignment Through Sequence Weighting, Position-Specific Gap Penalties and Weight Matrix Choice"
+url = "https://doi.org/10.1093/nar/22.22.4673"
+kind = "method"
+root = "ClustalW"
+status = "todo"
+builds_on = ["clustal"]
+
+[[paper]]
+id = "mafft"
+family = 5
+order = 8
+short = "MAFFT"
+authors = "Katoh et al."
+year = "2002"
+title = "MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform"
+url = "https://doi.org/10.1093/nar/30.14.3059"
+kind = "method"
+root = "Mafft"
+status = "todo"
+
+[[paper]]
+id = "muscle"
+family = 5
+order = 9
+short = "MUSCLE"
+authors = "Edgar"
+year = "2004"
+title = "MUSCLE: Multiple Sequence Alignment with High Accuracy and High Throughput"
+url = "https://doi.org/10.1093/nar/gkh340"
+kind = "method"
+root = "Muscle"
+status = "todo"
+
+[[paper]]
+id = "muscle-complexity"
+family = 5
+order = 10
+short = "MUSCLE"
+authors = "Edgar"
+year = "2004"
+title = "MUSCLE: A Multiple Sequence Alignment Method with Reduced Time and Space Complexity"
+url = "https://doi.org/10.1186/1471-2105-5-113"
+kind = "theory+algorithm"
+root = "MuscleComplexity"
+status = "todo"
+
+[[paper]]
+id = "mafft5"
+family = 5
+order = 11
+short = "MAFFT 5"
+authors = "Katoh et al."
+year = "2005"
+title = "MAFFT Version 5: Improvement in Accuracy of Multiple Sequence Alignment"
+url = "https://doi.org/10.1093/nar/gki198"
+kind = "method"
+root = "Mafft5"
+status = "todo"
+builds_on = ["mafft"]
+
+[[paper]]
+id = "kalign"
+family = 5
+order = 12
+short = "Kalign"
+authors = "Lassmann, Sonnhammer"
+year = "2005"
+title = "Kalign: An Accurate and Fast Multiple Sequence Alignment Algorithm"
+url = "https://doi.org/10.1186/1471-2105-6-298"
+kind = "method"
+root = "Kalign"
+status = "todo"
+
+[[paper]]
+id = "parttree"
+family = 5
+order = 13
+short = "PartTree"
+authors = "Katoh, Toh"
+year = "2007"
+title = "PartTree: An Algorithm to Build an Approximate Tree from a Large Number of Unaligned Sequences"
+url = "https://doi.org/10.1093/bioinformatics/btl592"
+kind = "method"
+root = "PartTree"
+status = "todo"
+
+[[paper]]
+id = "katoh2008"
+family = 5
+order = 14
+authors = "Katoh, Toh"
+year = "2008"
+title = "Recent Developments in the MAFFT Multiple Sequence Alignment Program"
+url = "https://doi.org/10.1093/bib/bbn013"
+kind = "method"
+root = "Katoh2008"
+status = "todo"
+
+[[paper]]
+id = "kalign2"
+family = 5
+order = 15
+short = "Kalign2"
+authors = "Lassmann et al."
+year = "2009"
+title = "Kalign2: High-Performance Multiple Alignment of Protein and Nucleotide Sequences Allowing External Features"
+url = "https://doi.org/10.1093/nar/gkn1006"
+kind = "method"
+root = "Kalign2"
+status = "todo"
+builds_on = ["kalign"]
+
+[[paper]]
+id = "clustal-omega"
+family = 5
+order = 16
+short = "Clustal Omega"
+authors = "Sievers et al."
+year = "2011"
+title = "Fast, Scalable Generation of High-Quality Protein Multiple Sequence Alignments Using Clustal Omega"
+url = "https://doi.org/10.1038/msb.2011.75"
+kind = "method"
+root = "ClustalOmega"
+status = "todo"
+
+[[paper]]
+id = "mafft7"
+family = 5
+order = 17
+short = "MAFFT 7"
+authors = "Katoh, Standley"
+year = "2013"
+title = "MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability"
+url = "https://doi.org/10.1093/molbev/mst010"
+kind = "method"
+root = "Mafft7"
+status = "todo"
+builds_on = ["mafft"]
+
+[[paper]]
+id = "yamada2016"
+family = 5
+order = 18
+authors = "Yamada, Tomii, Katoh"
+year = "2016"
+title = "Application of the MAFFT Sequence Alignment Program to Large Data—Reexamination of the Usefulness of Chained Guide Trees"
+url = "https://doi.org/10.1093/bioinformatics/btw412"
+kind = "method"
+root = "Yamada2016"
+status = "todo"
+
+[[paper]]
+id = "famsa"
+family = 5
+order = 19
+short = "FAMSA"
+authors = "Deorowicz et al."
+year = "2016"
+title = "FAMSA: Fast and Accurate Multiple Sequence Alignment of Huge Protein Families"
+url = "https://doi.org/10.1038/srep33964"
+kind = "method"
+root = "Famsa"
+status = "todo"
+
+[[paper]]
+id = "kalign3"
+family = 5
+order = 20
+short = "Kalign 3"
+authors = "Lassmann"
+year = "2020"
+title = "Kalign 3: Multiple Sequence Alignment of Large Data Sets"
+url = "https://doi.org/10.1093/bioinformatics/btz795"
+kind = "method"
+root = "Kalign3"
+status = "todo"
+builds_on = ["kalign2"]
+
+[[paper]]
+id = "famsa2"
+family = 5
+order = 21
+short = "FAMSA2"
+authors = "Gudyś et al."
+year = "2026"
+title = "Fast and Accurate Multiple-Protein-Sequence Alignment at Scale with FAMSA2"
+url = "https://doi.org/10.1038/s41587-026-03095-3"
+kind = "method"
+root = "Famsa2"
+status = "todo"
+builds_on = ["famsa"]
+
+# ---------------------------------------------------------------------------------------------
+# 6. Consistency-based, posterior-probability and graph-based alignment
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "morgenstern1996"
+family = 6
+order = 1
+short = "DIALIGN"
+authors = "Morgenstern, Dress, Werner"
+year = "1996"
+title = "Multiple DNA and Protein Sequence Alignment Based on Segment-to-Segment Comparison"
+url = "https://doi.org/10.1073/pnas.93.22.12098"
+kind = "method"
+root = "Morgenstern1996"
+status = "todo"
+
+[[paper]]
+id = "dialign2"
+family = 6
+order = 2
+short = "DIALIGN 2"
+authors = "Morgenstern"
+year = "1999"
+title = "DIALIGN 2: Improvement of the Segment-to-Segment Approach to Multiple Sequence Alignment"
+url = "https://doi.org/10.1093/bioinformatics/15.3.211"
+kind = "method"
+root = "Dialign2"
+status = "todo"
+builds_on = ["morgenstern1996"]
+
+[[paper]]
+id = "t-coffee"
+family = 6
+order = 3
+short = "T-Coffee"
+authors = "Notredame, Higgins, Heringa"
+year = "2000"
+title = "T-Coffee: A Novel Method for Fast and Accurate Multiple Sequence Alignment"
+url = "https://doi.org/10.1006/jmbi.2000.4042"
+kind = "method"
+root = "TCoffee"
+status = "todo"
+
+[[paper]]
+id = "lee2002"
+family = 6
+order = 4
+short = "POA"
+authors = "Lee, Grasso, Sharlow"
+year = "2002"
+title = "Multiple Sequence Alignment Using Partial Order Graphs (POA)"
+url = "https://doi.org/10.1093/bioinformatics/18.3.452"
+kind = "theory+algorithm"
+root = "Lee2002"
+status = "todo"
+
+[[paper]]
+id = "lee2003"
+family = 6
+order = 5
+authors = "Lee"
+year = "2003"
+title = "Generating Consensus Sequences from Partial Order Multiple Sequence Alignment Graphs"
+url = "https://doi.org/10.1093/bioinformatics/btg109"
+kind = "theory+algorithm"
+root = "Lee2003"
+status = "todo"
+builds_on = ["lee2002"]
+
+[[paper]]
+id = "probcons"
+family = 6
+order = 6
+short = "ProbCons"
+authors = "Do et al."
+year = "2005"
+title = "ProbCons: Probabilistic Consistency-Based Multiple Sequence Alignment"
+url = "https://doi.org/10.1101/gr.2821705"
+kind = "method"
+root = "ProbCons"
+status = "todo"
+
+[[paper]]
+id = "probalign"
+family = 6
+order = 7
+short = "Probalign"
+authors = "Roshan, Livesay"
+year = "2006"
+title = "Probalign: Multiple Sequence Alignment Using Partition Function Posterior Probabilities"
+url = "https://doi.org/10.1093/bioinformatics/btl472"
+kind = "method"
+root = "Probalign"
+status = "todo"
+
+[[paper]]
+id = "mummals"
+family = 6
+order = 8
+short = "MUMMALS"
+authors = "Pei, Grishin"
+year = "2006"
+title = "MUMMALS: Multiple Sequence Alignment Improved by Using Hidden Markov Models with Local Structural Information"
+url = "https://doi.org/10.1093/nar/gkl514"
+kind = "method"
+root = "Mummals"
+status = "todo"
+
+[[paper]]
+id = "wheeler2007"
+family = 6
+order = 9
+short = "Opal"
+authors = "Wheeler, Kececioglu"
+year = "2007"
+title = "Multiple Alignment by Aligning Alignments (Opal)"
+url = "https://doi.org/10.1093/bioinformatics/btm226"
+kind = "method"
+root = "Wheeler2007"
+status = "todo"
+
+[[paper]]
+id = "pecan"
+family = 6
+order = 10
+short = "Pecan"
+authors = "Paten et al."
+year = "2008"
+title = "Enredo and Pecan: Genome-Wide Mammalian Consistency-Based Multiple Alignment with Paralogs"
+url = "https://doi.org/10.1101/gr.076554.108"
+kind = "method"
+root = "Pecan"
+status = "todo"
+note = "Pecan is the consistency-based aligner; Enredo, the segmentation of genomes into colinear segments, is outside the scope of this hub. The companion paper, Paten et al. 2008, Genome-Wide Nucleotide-Level Mammalian Ancestor Reconstruction (https://doi.org/10.1101/gr.076521.108), reconstructs ancestral sequences (Ortheus) in the same pipeline."
+
+[[paper]]
+id = "fsa"
+family = 6
+order = 11
+short = "FSA"
+authors = "Bradley et al."
+year = "2009"
+title = "Fast Statistical Alignment (FSA)"
+url = "https://doi.org/10.1371/journal.pcbi.1000392"
+kind = "method"
+root = "Fsa"
+status = "todo"
+
+[[paper]]
+id = "dialign-tx"
+family = 6
+order = 12
+short = "DIALIGN-TX"
+authors = "Subramanian et al."
+year = "2008"
+title = "DIALIGN-TX: Greedy and Progressive Approaches for Segment-Based Multiple Sequence Alignment"
+url = "https://doi.org/10.1186/1748-7188-3-6"
+kind = "method"
+root = "DialignTx"
+status = "todo"
+builds_on = ["dialign2"]
+
+[[paper]]
+id = "msaprobs"
+family = 6
+order = 13
+short = "MSAProbs"
+authors = "Liu, Schmidt, Maskell"
+year = "2010"
+title = "MSAProbs: Multiple Sequence Alignment Based on Pair Hidden Markov Models and Partition Function Posterior Probabilities"
+url = "https://doi.org/10.1093/bioinformatics/btq338"
+kind = "method"
+root = "MsaProbs"
+status = "todo"
+
+[[paper]]
+id = "quickprobs"
+family = 6
+order = 14
+short = "QuickProbs"
+authors = "Gudyś, Deorowicz"
+year = "2014"
+title = "QuickProbs: A Fast Multiple Sequence Alignment Algorithm Designed for Graphics Processors"
+url = "https://doi.org/10.1371/journal.pone.0088901"
+kind = "method"
+root = "QuickProbs"
+status = "todo"
+builds_on = ["msaprobs"]
+
+[[paper]]
+id = "muscle5"
+family = 6
+order = 15
+short = "Muscle5"
+authors = "Edgar"
+year = "2022"
+title = "Muscle5: High-Accuracy Alignment Ensembles Enable Unbiased Assessments of Sequence Homology and Phylogeny"
+url = "https://doi.org/10.1038/s41467-022-34630-w"
+kind = "method"
+root = "Muscle5"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 7. Pairwise alignment and dynamic programming foundations
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "needleman1970"
+family = 7
+order = 1
+authors = "Needleman, Wunsch"
+year = "1970"
+title = "A General Method Applicable to the Search for Similarities in the Amino Acid Sequence of Two Proteins"
+url = "https://doi.org/10.1016/0022-2836(70)90057-4"
+kind = "theory+algorithm"
+root = "Needleman1970"
+status = "todo"
+
+[[paper]]
+id = "wagner1974"
+family = 7
+order = 2
+authors = "Wagner, Fischer"
+year = "1974"
+title = "The String-to-String Correction Problem"
+url = "https://doi.org/10.1145/321796.321811"
+kind = "theory+algorithm"
+root = "Wagner1974"
+status = "todo"
+
+[[paper]]
+id = "hirschberg1975"
+family = 7
+order = 3
+authors = "Hirschberg"
+year = "1975"
+title = "A Linear Space Algorithm for Computing Maximal Common Subsequences"
+url = "https://doi.org/10.1145/360825.360861"
+kind = "theory+algorithm"
+root = "Hirschberg1975"
+status = "todo"
+
+[[paper]]
+id = "waterman1976"
+family = 7
+order = 4
+authors = "Waterman, Smith, Beyer"
+year = "1976"
+title = "Some Biological Sequence Metrics"
+url = "https://doi.org/10.1016/0001-8708(76)90202-4"
+kind = "theory"
+root = "Waterman1976"
+status = "todo"
+
+[[paper]]
+id = "smith1981"
+family = 7
+order = 5
+authors = "Smith, Waterman"
+year = "1981"
+title = "Identification of Common Molecular Subsequences"
+url = "https://doi.org/10.1016/0022-2836(81)90087-5"
+kind = "theory+algorithm"
+root = "Smith1981"
+status = "todo"
+
+[[paper]]
+id = "gotoh1982"
+family = 7
+order = 6
+authors = "Gotoh"
+year = "1982"
+title = "An Improved Algorithm for Matching Biological Sequences"
+url = "https://doi.org/10.1016/0022-2836(82)90398-9"
+kind = "theory+algorithm"
+root = "Gotoh1982"
+status = "todo"
+
+[[paper]]
+id = "ukkonen1985"
+family = 7
+order = 7
+authors = "Ukkonen"
+year = "1985"
+title = "Algorithms for Approximate String Matching"
+url = "https://doi.org/10.1016/S0019-9958(85)80046-2"
+kind = "theory+algorithm"
+root = "Ukkonen1985"
+status = "todo"
+
+[[paper]]
+id = "myers1988"
+family = 7
+order = 8
+authors = "Myers, Miller"
+year = "1988"
+title = "Optimal Alignments in Linear Space"
+url = "https://doi.org/10.1093/bioinformatics/4.1.11"
+kind = "theory+algorithm"
+root = "Myers1988"
+status = "todo"
+
+[[paper]]
+id = "miyazawa1995"
+family = 7
+order = 9
+authors = "Miyazawa"
+year = "1995"
+title = "A Reliable Sequence Alignment Method Based on Probabilities of Residue Correspondences"
+url = "https://doi.org/10.1093/protein/8.10.999"
+kind = "theory+algorithm"
+root = "Miyazawa1995"
+status = "todo"
+
+[[paper]]
+id = "myers1999"
+family = 7
+order = 10
+authors = "Myers"
+year = "1999"
+title = "A Fast Bit-Vector Algorithm for Approximate String Matching Based on Dynamic Programming"
+url = "https://doi.org/10.1145/316542.316550"
+kind = "theory+algorithm"
+root = "Myers1999"
+status = "todo"
+
+[[paper]]
+id = "backurs2015"
+family = 7
+order = 11
+authors = "Backurs, Indyk"
+year = "2015"
+title = "Edit Distance Cannot Be Computed in Strongly Subquadratic Time (Unless SETH Is False)"
+url = "https://doi.org/10.1145/2746539.2746612"
+kind = "theory"
+root = "Backurs2015"
+status = "todo"
+
+[[paper]]
+id = "wfa"
+family = 7
+order = 12
+short = "WFA"
+authors = "Marco-Sola et al."
+year = "2021"
+title = "Fast Gap-Affine Pairwise Alignment Using the Wavefront Algorithm (WFA)"
+url = "https://doi.org/10.1093/bioinformatics/btaa777"
+kind = "theory+algorithm"
+root = "Wfa"
+status = "todo"
+
+[[paper]]
+id = "marcosola2023"
+family = 7
+order = 13
+short = "BiWFA"
+authors = "Marco-Sola et al."
+year = "2023"
+title = "Optimal Gap-Affine Alignment in O(s) Space (BiWFA)"
+url = "https://doi.org/10.1093/bioinformatics/btad074"
+kind = "theory+algorithm"
+root = "MarcoSola2023"
+status = "todo"
+builds_on = ["wfa"]
+
+# ---------------------------------------------------------------------------------------------
+# 8. Exact multiple alignment, computational complexity and approximation algorithms
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "sankoff1983"
+family = 8
+order = 1
+authors = "Sankoff, Cedergren"
+year = "1983"
+title = "Simultaneous Comparison of Three or More Sequences Related by a Tree"
+url = "https://web.stanford.edu/group/cslipublications/cslipublications/site/1575862174.shtml"
+kind = "theory+algorithm"
+root = "Sankoff1983"
+status = "todo"
+note = "A chapter of D. Sankoff, J. B. Kruskal (eds.), Time Warps, String Edits, and Macromolecules: The Theory and Practice of Sequence Comparison (Addison-Wesley, 1983; reissued by CSLI Publications, 1999), with no DOI: the link is the book's page."
+
+[[paper]]
+id = "carrillo1988"
+family = 8
+order = 2
+authors = "Carrillo, Lipman"
+year = "1988"
+title = "The Multiple Sequence Alignment Problem in Biology"
+url = "https://doi.org/10.1137/0148063"
+kind = "theory+algorithm"
+root = "Carrillo1988"
+status = "todo"
+
+[[paper]]
+id = "altschul1989"
+family = 8
+order = 3
+authors = "Altschul"
+year = "1989"
+title = "Gap Costs for Multiple Sequence Alignment"
+url = "https://doi.org/10.1016/S0022-5193(89)80196-1"
+kind = "theory"
+root = "Altschul1989"
+status = "todo"
+
+[[paper]]
+id = "altschul1989-stars"
+family = 8
+order = 4
+authors = "Altschul, Lipman"
+year = "1989"
+title = "Trees, Stars, and Multiple Biological Sequence Alignment"
+url = "https://doi.org/10.1137/0149012"
+kind = "theory+algorithm"
+root = "Altschul1989Stars"
+status = "todo"
+
+[[paper]]
+id = "pevzner1992"
+family = 8
+order = 5
+authors = "Pevzner"
+year = "1992"
+title = "Multiple Alignment, Communication Cost, and Graph Matching"
+url = "https://doi.org/10.1137/0152101"
+kind = "theory+algorithm"
+root = "Pevzner1992"
+status = "todo"
+
+[[paper]]
+id = "gusfield1993"
+family = 8
+order = 6
+authors = "Gusfield"
+year = "1993"
+title = "Efficient Methods for Multiple Sequence Alignment with Guaranteed Error Bounds"
+url = "https://doi.org/10.1007/BF02460299"
+kind = "theory+algorithm"
+root = "Gusfield1993"
+status = "todo"
+
+[[paper]]
+id = "kececioglu1993"
+family = 8
+order = 7
+authors = "Kececioglu"
+year = "1993"
+title = "The Maximum Weight Trace Problem in Multiple Sequence Alignment"
+url = "https://doi.org/10.1007/BFb0029800"
+kind = "theory+algorithm"
+root = "Kececioglu1993"
+status = "todo"
+
+[[paper]]
+id = "wang1994"
+family = 8
+order = 8
+authors = "Wang, Jiang"
+year = "1994"
+title = "On the Complexity of Multiple Sequence Alignment"
+url = "https://doi.org/10.1089/cmb.1994.1.337"
+kind = "theory"
+root = "Wang1994"
+status = "todo"
+
+[[paper]]
+id = "bafna1997"
+family = 8
+order = 9
+authors = "Bafna, Lawler, Pevzner"
+year = "1997"
+title = "Approximation Algorithms for Multiple Sequence Alignment"
+url = "https://doi.org/10.1016/S0304-3975(97)00023-6"
+kind = "theory+algorithm"
+root = "Bafna1997"
+status = "todo"
+
+[[paper]]
+id = "stoye1998"
+family = 8
+order = 10
+authors = "Stoye"
+year = "1998"
+title = "Multiple Sequence Alignment with the Divide-and-Conquer Method"
+url = "https://doi.org/10.1016/S0378-1119(98)00097-3"
+kind = "theory+algorithm"
+root = "Stoye1998"
+status = "todo"
+
+[[paper]]
+id = "gestalt"
+family = 8
+order = 11
+short = "GESTALT"
+authors = "Lancia, Ravi"
+year = "1999"
+title = "GESTALT: Genomic Steiner Alignments"
+url = "https://doi.org/10.1007/3-540-48452-3_8"
+kind = "theory+algorithm"
+root = "Gestalt"
+status = "todo"
+
+[[paper]]
+id = "kececioglu2004"
+family = 8
+order = 12
+authors = "Kececioglu, Starrett"
+year = "2004"
+title = "Aligning Alignments Exactly"
+url = "https://doi.org/10.1145/974614.974626"
+kind = "theory+algorithm"
+root = "Kececioglu2004"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 9. Alignment uncertainty, consensus, accuracy metrics and filtering
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "castresana2000"
+family = 9
+order = 1
+short = "Gblocks"
+authors = "Castresana"
+year = "2000"
+title = "Selection of Conserved Blocks from Multiple Alignments for Their Use in Phylogenetic Analysis (Gblocks)"
+url = "https://doi.org/10.1093/oxfordjournals.molbev.a026334"
+kind = "method"
+root = "Castresana2000"
+status = "todo"
+
+[[paper]]
+id = "cline2002"
+family = 9
+order = 2
+authors = "Cline, Hughey, Karplus"
+year = "2002"
+title = "Predicting Reliable Regions in Protein Sequence Alignments"
+url = "https://doi.org/10.1093/bioinformatics/18.2.306"
+kind = "method"
+root = "Cline2002"
+status = "todo"
+
+[[paper]]
+id = "landan2007"
+family = 9
+order = 3
+authors = "Landan, Graur"
+year = "2007"
+title = "Heads or Tails: A Simple Reliability Check for Multiple Sequence Alignments"
+url = "https://doi.org/10.1093/molbev/msm060"
+kind = "method"
+root = "Landan2007"
+status = "todo"
+
+[[paper]]
+id = "trimal"
+family = 9
+order = 4
+short = "trimAl"
+authors = "Capella-Gutiérrez, Silla-Martínez, Gabaldón"
+year = "2009"
+title = "trimAl: A Tool for Automated Alignment Trimming in Large-Scale Phylogenetic Analyses"
+url = "https://doi.org/10.1093/bioinformatics/btp348"
+kind = "method"
+root = "TrimAl"
+status = "todo"
+
+[[paper]]
+id = "misof2009"
+family = 9
+order = 5
+short = "ALISCORE"
+authors = "Misof, Misof"
+year = "2009"
+title = "A Monte Carlo Approach Successfully Identifies Randomness in Multiple Sequence Alignments: A More Objective Means of Data Exclusion (ALISCORE)"
+url = "https://doi.org/10.1093/sysbio/syp006"
+kind = "method"
+root = "Misof2009"
+status = "todo"
+
+[[paper]]
+id = "penn2010"
+family = 9
+order = 6
+short = "GUIDANCE"
+authors = "Penn et al."
+year = "2010"
+title = "An Alignment Confidence Score Capturing Robustness to Guide Tree Uncertainty (GUIDANCE)"
+url = "https://doi.org/10.1093/molbev/msq066"
+kind = "method"
+root = "Penn2010"
+status = "todo"
+
+[[paper]]
+id = "bmge"
+family = 9
+order = 7
+short = "BMGE"
+authors = "Criscuolo, Gribaldo"
+year = "2010"
+title = "BMGE (Block Mapping and Gathering with Entropy): A New Software for Selection of Phylogenetic Informative Regions from Multiple Sequence Alignments"
+url = "https://doi.org/10.1186/1471-2148-10-210"
+kind = "method"
+root = "Bmge"
+status = "todo"
+
+[[paper]]
+id = "zorro"
+family = 9
+order = 8
+short = "ZORRO"
+authors = "Wu, Chatterji, Eisen"
+year = "2012"
+title = "ZORRO: Accounting for Alignment Uncertainty in Phylogenomics"
+url = "https://doi.org/10.1371/journal.pone.0030288"
+kind = "method"
+root = "Zorro"
+status = "todo"
+
+[[paper]]
+id = "fastsp"
+family = 9
+order = 9
+short = "FastSP"
+authors = "Mirarab, Warnow"
+year = "2011"
+title = "FastSP: Linear-Time Calculation of Alignment Accuracy"
+url = "https://doi.org/10.1093/bioinformatics/btr553"
+kind = "theory+algorithm"
+root = "FastSp"
+status = "todo"
+
+[[paper]]
+id = "tcs"
+family = 9
+order = 10
+short = "TCS"
+authors = "Chang et al."
+year = "2014"
+title = "TCS: A New Multiple Sequence Alignment Reliability Measure to Estimate Alignment Accuracy and Improve Phylogenetic Tree Reconstruction"
+url = "https://doi.org/10.1093/molbev/msu117"
+kind = "method"
+root = "Tcs"
+status = "todo"
+
+[[paper]]
+id = "guidance2"
+family = 9
+order = 11
+short = "GUIDANCE2"
+authors = "Sela et al."
+year = "2015"
+title = "GUIDANCE2: Accurate Detection of Unreliable Alignment Regions Accounting for the Uncertainty of Multiple Parameters"
+url = "https://doi.org/10.1093/nar/gkv318"
+kind = "method"
+root = "Guidance2"
+status = "todo"
+builds_on = ["penn2010"]
+
+[[paper]]
+id = "tan2015"
+family = 9
+order = 12
+authors = "Tan et al."
+year = "2015"
+title = "Current Methods for Automated Filtering of Multiple Sequence Alignments Frequently Worsen Single-Gene Phylogenetic Inference"
+url = "https://doi.org/10.1093/sysbio/syv033"
+kind = "evaluation"
+root = "Tan2015"
+status = "todo"
+
+[[paper]]
+id = "clipkit"
+family = 9
+order = 13
+short = "ClipKIT"
+authors = "Steenwyk et al."
+year = "2020"
+title = "ClipKIT: A Multiple Sequence Alignment Trimming Software for Accurate Phylogenomic Inference"
+url = "https://doi.org/10.1371/journal.pbio.3001007"
+kind = "method"
+root = "ClipKit"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 10. Statistical limitations and the impact of alignment on phylogenetic inference
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "morrison1997"
+family = 10
+order = 1
+authors = "Morrison, Ellis"
+year = "1997"
+title = "Effects of Nucleotide Sequence Alignment on Phylogeny Estimation: A Case Study of 18S rDNAs of Apicomplexa"
+url = "https://doi.org/10.1093/oxfordjournals.molbev.a025779"
+kind = "evaluation"
+root = "Morrison1997"
+status = "todo"
+
+[[paper]]
+id = "nelesen2008"
+family = 10
+order = 2
+authors = "Nelesen et al."
+year = "2008"
+title = "The Effect of the Guide Tree on Multiple Sequence Alignments and Subsequent Phylogenetic Analyses"
+url = "https://doi.org/10.1142/9789812776136_0004"
+kind = "evaluation"
+root = "Nelesen2008"
+status = "todo"
+
+[[paper]]
+id = "liu2009"
+family = 10
+order = 3
+authors = "Liu et al."
+year = "2009"
+title = "Barking Up the Wrong Treelength: The Impact of Gap Penalty on Alignment and Tree Accuracy"
+url = "https://doi.org/10.1109/TCBB.2008.63"
+kind = "evaluation"
+root = "Liu2009"
+status = "todo"
+
+[[paper]]
+id = "wang2011"
+family = 10
+order = 4
+authors = "Wang et al."
+year = "2011"
+title = "The Impact of Multiple Protein Sequence Alignment on Phylogenetic Estimation"
+url = "https://doi.org/10.1109/TCBB.2009.68"
+kind = "evaluation"
+root = "Wang2011"
+status = "todo"
+
+[[paper]]
+id = "liu2012"
+family = 10
+order = 5
+authors = "Liu, Warnow"
+year = "2012"
+title = "Treelength Optimization for Phylogeny Estimation"
+url = "https://doi.org/10.1371/journal.pone.0033104"
+kind = "method+evaluation"
+root = "Liu2012"
+status = "todo"
+
+[[paper]]
+id = "warnow2012"
+family = 10
+order = 6
+authors = "Warnow"
+year = "2012"
+title = "Standard Maximum Likelihood Analyses of Alignments with Gaps Can Be Statistically Inconsistent"
+url = "https://doi.org/10.1371/currents.RRN1308"
+kind = "theory"
+root = "Warnow2012"
+status = "todo"
+note = "Even with the true alignment, maximum likelihood that treats gaps as missing data need not estimate the tree consistently."
+
+[[paper]]
+id = "blackburne2012"
+family = 10
+order = 7
+authors = "Blackburne, Whelan"
+year = "2012"
+title = "Measuring the Distance Between Multiple Sequence Alignments"
+url = "https://doi.org/10.1093/bioinformatics/btr701"
+kind = "theory+algorithm"
+root = "Blackburne2012"
+status = "todo"
+
+[[paper]]
+id = "blackburne2013"
+family = 10
+order = 8
+authors = "Blackburne, Whelan"
+year = "2013"
+title = "Class of Multiple Sequence Alignment Algorithm Affects Genomic Analysis"
+url = "https://doi.org/10.1093/molbev/mss256"
+kind = "evaluation"
+root = "Blackburne2013"
+status = "todo"
+
+[[paper]]
+id = "boyce2015"
+family = 10
+order = 9
+authors = "Boyce, Sievers, Higgins"
+year = "2015"
+title = "Instability in Progressive Multiple Sequence Alignment Algorithms"
+url = "https://doi.org/10.1186/s13015-015-0057-1"
+kind = "theory+evaluation"
+root = "Boyce2015"
+status = "todo"
+
+[[paper]]
+id = "nute2019"
+family = 10
+order = 10
+authors = "Nute, Saleh, Warnow"
+year = "2019"
+title = "Evaluating Statistical Multiple Sequence Alignment in Comparison to Other Alignment Methods on Protein Data Sets"
+url = "https://doi.org/10.1093/sysbio/syy068"
+kind = "evaluation"
+root = "Nute2019"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 11. RNA, codon and structure-aware alignment
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "sankoff1985"
+family = 11
+order = 1
+authors = "Sankoff"
+year = "1985"
+title = "Simultaneous Solution of the RNA Folding, Alignment and Protosequence Problems"
+url = "https://doi.org/10.1137/0145048"
+kind = "theory+algorithm"
+root = "Sankoff1985"
+status = "todo"
+
+[[paper]]
+id = "hochsmann2004"
+family = 11
+order = 2
+short = "RNAforester"
+authors = "Höchsmann, Voss, Giegerich"
+year = "2004"
+title = "Pure Multiple RNA Secondary Structure Alignments: A Progressive Profile Approach"
+url = "https://doi.org/10.1109/TCBB.2004.11"
+kind = "theory+algorithm"
+root = "Hochsmann2004"
+status = "todo"
+note = "The multiple alignment of RNA secondary structures in RNAforester. Its pairwise forest alignment is in Höchsmann, Töller, Giegerich, Kurtz, Local Similarity in RNA Secondary Structures, CSB 2003 (https://doi.org/10.1109/CSB.2003.1227315)."
+
+[[paper]]
+id = "gardner2004"
+family = 11
+order = 3
+authors = "Gardner, Giegerich"
+year = "2004"
+title = "A Comprehensive Comparison of Comparative RNA Structure Prediction Approaches"
+url = "https://doi.org/10.1186/1471-2105-5-140"
+kind = "evaluation"
+root = "Gardner2004"
+status = "todo"
+
+[[paper]]
+id = "promals"
+family = 11
+order = 4
+short = "PROMALS"
+authors = "Pei, Grishin"
+year = "2007"
+title = "PROMALS: Towards Accurate Multiple Sequence Alignments of Distantly Related Proteins"
+url = "https://doi.org/10.1093/bioinformatics/btm017"
+kind = "method"
+root = "Promals"
+status = "todo"
+
+[[paper]]
+id = "will2007"
+family = 11
+order = 5
+short = "LocARNA"
+authors = "Will et al."
+year = "2007"
+title = "Inferring Noncoding RNA Families and Classes by Means of Genome-Scale Structure-Based Clustering (LocARNA)"
+url = "https://doi.org/10.1371/journal.pcbi.0030065"
+kind = "method"
+root = "Will2007"
+status = "todo"
+
+[[paper]]
+id = "katoh2008-ncrna"
+family = 11
+order = 6
+authors = "Katoh, Toh"
+year = "2008"
+title = "Improved Accuracy of Multiple ncRNA Alignment by Incorporating Structural Information into a MAFFT-Based Framework"
+url = "https://doi.org/10.1186/1471-2105-9-212"
+kind = "method"
+root = "Katoh2008Ncrna"
+status = "todo"
+
+[[paper]]
+id = "promals3d"
+family = 11
+order = 7
+short = "PROMALS3D"
+authors = "Pei, Kim, Grishin"
+year = "2008"
+title = "PROMALS3D: A Tool for Multiple Protein Sequence and Structure Alignments"
+url = "https://doi.org/10.1093/nar/gkn072"
+kind = "method"
+root = "Promals3D"
+status = "todo"
+builds_on = ["promals"]
+
+[[paper]]
+id = "r-coffee"
+family = 11
+order = 8
+short = "R-Coffee"
+authors = "Wilm et al."
+year = "2008"
+title = "R-Coffee: A Method for Multiple Alignment of Non-Coding RNA"
+url = "https://doi.org/10.1093/nar/gkn174"
+kind = "method"
+root = "RCoffee"
+status = "todo"
+builds_on = ["t-coffee"]
+
+[[paper]]
+id = "translatorx"
+family = 11
+order = 9
+short = "TranslatorX"
+authors = "Abascal, Zardoya, Telford"
+year = "2010"
+title = "TranslatorX: Multiple Alignment of Nucleotide Sequences Guided by Amino Acid Translations"
+url = "https://doi.org/10.1093/nar/gkq291"
+kind = "method"
+root = "TranslatorX"
+status = "todo"
+
+[[paper]]
+id = "macse"
+family = 11
+order = 10
+short = "MACSE"
+authors = "Ranwez et al."
+year = "2011"
+title = "MACSE: Multiple Alignment of Coding Sequences Accounting for Frameshifts and Stop Codons"
+url = "https://doi.org/10.1371/journal.pone.0022594"
+kind = "method"
+root = "Macse"
+status = "todo"
+
+[[paper]]
+id = "macse2"
+family = 11
+order = 11
+short = "MACSE v2"
+authors = "Ranwez et al."
+year = "2018"
+title = "MACSE v2: Toolkit for the Alignment of Coding Sequences Accounting for Frameshifts and Stop Codons"
+url = "https://doi.org/10.1093/molbev/msy159"
+kind = "method"
+root = "Macse2"
+status = "todo"
+builds_on = ["macse"]
+
+[[paper]]
+id = "foldmason"
+family = 11
+order = 12
+short = "FoldMason"
+authors = "Gilchrist, Mirdita, Steinegger"
+year = "2026"
+title = "Multiple Protein Structure Alignment at Scale with FoldMason"
+url = "https://doi.org/10.1126/science.ads6733"
+kind = "method"
+root = "FoldMason"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 12. Machine learning and learned statistical alignment models
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "contralign"
+family = 12
+order = 1
+short = "CONTRAlign"
+authors = "Do, Gross, Batzoglou"
+year = "2006"
+title = "CONTRAlign: Discriminative Training for Protein Sequence Alignment"
+url = "https://doi.org/10.1007/11732990_15"
+kind = "method"
+root = "ContrAlign"
+status = "todo"
+
+[[paper]]
+id = "learnmsa"
+family = 12
+order = 2
+short = "learnMSA"
+authors = "Becker, Stanke"
+year = "2022"
+title = "learnMSA: Learning and Aligning Large Protein Families"
+url = "https://doi.org/10.1093/gigascience/giac104"
+kind = "method"
+root = "LearnMsa"
+status = "todo"
+
+[[paper]]
+id = "learnmsa2"
+family = 12
+order = 3
+short = "learnMSA2"
+authors = "Becker, Stanke"
+year = "2024"
+title = "learnMSA2: Deep Protein Multiple Alignments with Large Language and Hidden Markov Models"
+url = "https://doi.org/10.1093/bioinformatics/btae381"
+kind = "method"
+root = "LearnMsa2"
+status = "todo"
+builds_on = ["learnmsa"]
+
+[[paper]]
+id = "babappalign"
+family = 12
+order = 4
+short = "BABAPPAlign"
+authors = "Sinha"
+year = "2026"
+title = "BABAPPAlign: A Multiple Sequence Alignment Engine with a Learned Residue-Level Scoring Function"
+url = "https://doi.org/10.1093/bioinformatics/btag189"
+kind = "method"
+root = "BabappAlign"
+status = "todo"
+
+[[paper]]
+id = "aries"
+family = 12
+order = 5
+short = "ARIES"
+authors = "Hoang, Armour-Garb, Singh"
+year = "2026"
+title = "ARIES: Fast and Accurate Construction of Multiple Sequence Alignments from Protein Language Embeddings"
+url = "https://doi.org/10.1101/gr.282254.126"
+kind = "method"
+root = "Aries"
+status = "todo"
