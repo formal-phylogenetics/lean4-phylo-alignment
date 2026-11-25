@@ -42,12 +42,12 @@ against the paper, and an audit of the paper reports its errors and gaps.
 | [5. Progressive alignment and iterative refinement](#5-progressive-alignment-and-iterative-refinement) | 21 | 0 | 0 | 0 | 21 |
 | [6. Consistency-based, posterior-probability and graph-based alignment](#6-consistency-based-posterior-probability-and-graph-based-alignment) | 15 | 0 | 0 | 0 | 15 |
 | [7. Pairwise alignment and dynamic programming foundations](#7-pairwise-alignment-and-dynamic-programming-foundations) | 13 | 0 | 0 | 0 | 13 |
-| [8. Exact multiple alignment, computational complexity and approximation algorithms](#8-exact-multiple-alignment-computational-complexity-and-approximation-algorithms) | 12 | 0 | 0 | 0 | 12 |
+| [8. Exact multiple alignment, computational complexity and approximation algorithms](#8-exact-multiple-alignment-computational-complexity-and-approximation-algorithms) | 13 | 0 | 0 | 0 | 13 |
 | [9. Alignment uncertainty, consensus, accuracy metrics and filtering](#9-alignment-uncertainty-consensus-accuracy-metrics-and-filtering) | 13 | 0 | 0 | 0 | 13 |
 | [10. Statistical limitations and the impact of alignment on phylogenetic inference](#10-statistical-limitations-and-the-impact-of-alignment-on-phylogenetic-inference) | 10 | 0 | 0 | 0 | 10 |
 | [11. RNA, codon and structure-aware alignment](#11-rna-codon-and-structure-aware-alignment) | 12 | 0 | 0 | 0 | 12 |
 | [12. Machine learning and learned statistical alignment models](#12-machine-learning-and-learned-statistical-alignment-models) | 5 | 0 | 0 | 0 | 5 |
-| **All** | **155** | **0** | **0** | **0** | **155** |
+| **All** | **156** | **0** | **0** | **0** | **156** |
 
 <!-- END catalog:summary -->
 
@@ -59,8 +59,7 @@ support, and evaluations of methods with the methods they assess. The scope is t
 alignments and homology, the models of insertion and deletion, and the joint estimation of alignments
 and trees. Whole-genome alignment, the mapping of sequencing reads, phylogenetic placement,
 metagenomics and simulators of sequences are outside it. The estimation of a tree from an alignment is
-in [lean4-phylo-gene-tree](https://github.com/vltanh/lean4-phylo-gene-tree), with Sankoff (1975),
-Minimal Mutation Trees of Sequences, on which family 8 builds; species trees are in
+in [lean4-phylo-gene-tree](https://github.com/vltanh/lean4-phylo-gene-tree), species trees are in
 [lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree), and networks in
 [lean4-phylo-network](https://github.com/vltanh/lean4-phylo-network). The pairwise alignments of
 family 7 and the indel models of family 3 are foundations of this hub: what several papers use of
@@ -165,7 +164,7 @@ Priority: high.
 | 5 | Corpet (1988), [Multiple Sequence Alignment with Hierarchical Clustering (MultAlin)](https://doi.org/10.1093/nar/16.22.10881) | method | `lean4-corpet1988` | to do | - |
 | 6 | Gotoh (1993), [Optimal Alignment Between Groups of Sequences and Its Application to Multiple Sequence Alignment](https://doi.org/10.1093/bioinformatics/9.3.361) | theory and algorithm | `lean4-gotoh1993` | to do | - |
 | 7 | Thompson, Higgins, Gibson (1994), [CLUSTAL W: Improving the Sensitivity of Progressive Multiple Sequence Alignment Through Sequence Weighting, Position-Specific Gap Penalties and Weight Matrix Choice](https://doi.org/10.1093/nar/22.22.4673) | method | `lean4-clustalw` | to do | CLUSTAL |
-| 8 | Katoh et al. (2002), [MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform](https://doi.org/10.1093/nar/30.14.3059) | method | `lean4-mafft` | to do | - |
+| 8 | Katoh et al. (2002), [MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform](https://doi.org/10.1093/nar/gkf436) | method | `lean4-mafft` | to do | - |
 | 9 | Edgar (2004), [MUSCLE: Multiple Sequence Alignment with High Accuracy and High Throughput](https://doi.org/10.1093/nar/gkh340) | method | `lean4-muscle` | to do | - |
 | 10 | Edgar (2004), [MUSCLE: A Multiple Sequence Alignment Method with Reduced Time and Space Complexity](https://doi.org/10.1186/1471-2105-5-113) | theory and algorithm | `lean4-muscle-complexity` | to do | - |
 | 11 | Katoh et al. (2005), [MAFFT Version 5: Improvement in Accuracy of Multiple Sequence Alignment](https://doi.org/10.1093/nar/gki198) | method | `lean4-mafft5` | to do | MAFFT |
@@ -177,7 +176,7 @@ Priority: high.
 | 17 | Katoh, Standley (2013), [MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability](https://doi.org/10.1093/molbev/mst010) | method | `lean4-mafft7` | to do | MAFFT |
 | 18 | Yamada, Tomii, Katoh (2016), [Application of the MAFFT Sequence Alignment Program to Large Data—Reexamination of the Usefulness of Chained Guide Trees](https://doi.org/10.1093/bioinformatics/btw412) | method | `lean4-yamada2016` | to do | - |
 | 19 | Deorowicz et al. (2016), [FAMSA: Fast and Accurate Multiple Sequence Alignment of Huge Protein Families](https://doi.org/10.1038/srep33964) | method | `lean4-famsa` | to do | - |
-| 20 | Lassmann (2020), [Kalign 3: Multiple Sequence Alignment of Large Data Sets](https://doi.org/10.1093/bioinformatics/btz795) | method | `lean4-kalign3` | to do | Kalign2 |
+| 20 | Lassmann (2020), [Kalign 3: Multiple Sequence Alignment of Large Datasets](https://doi.org/10.1093/bioinformatics/btz795) | method | `lean4-kalign3` | to do | Kalign2 |
 | 21 | Gudyś et al. (2026), [Fast and Accurate Multiple-Protein-Sequence Alignment at Scale with FAMSA2](https://doi.org/10.1038/s41587-026-03095-3) | method | `lean4-famsa2` | to do | FAMSA |
 
 ### 6. Consistency-based, posterior-probability and graph-based alignment
@@ -228,18 +227,19 @@ Priority: high.
 
 | # | Paper | Kind | Repository | Status | Uses |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | Sankoff, Cedergren (1983), [Simultaneous Comparison of Three or More Sequences Related by a Tree](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575862174.shtml) | theory and algorithm | `lean4-sankoff1983` | to do | - |
-| 2 | Carrillo, Lipman (1988), [The Multiple Sequence Alignment Problem in Biology](https://doi.org/10.1137/0148063) | theory and algorithm | `lean4-carrillo1988` | to do | - |
-| 3 | Altschul (1989), [Gap Costs for Multiple Sequence Alignment](https://doi.org/10.1016/S0022-5193(89)80196-1) | theory | `lean4-altschul1989` | to do | - |
-| 4 | Altschul, Lipman (1989), [Trees, Stars, and Multiple Biological Sequence Alignment](https://doi.org/10.1137/0149012) | theory and algorithm | `lean4-altschul1989-stars` | to do | - |
-| 5 | Pevzner (1992), [Multiple Alignment, Communication Cost, and Graph Matching](https://doi.org/10.1137/0152101) | theory and algorithm | `lean4-pevzner1992` | to do | - |
-| 6 | Gusfield (1993), [Efficient Methods for Multiple Sequence Alignment with Guaranteed Error Bounds](https://doi.org/10.1007/BF02460299) | theory and algorithm | `lean4-gusfield1993` | to do | - |
-| 7 | Kececioglu (1993), [The Maximum Weight Trace Problem in Multiple Sequence Alignment](https://doi.org/10.1007/BFb0029800) | theory and algorithm | `lean4-kececioglu1993` | to do | - |
-| 8 | Wang, Jiang (1994), [On the Complexity of Multiple Sequence Alignment](https://doi.org/10.1089/cmb.1994.1.337) | theory | `lean4-wang1994` | to do | - |
-| 9 | Bafna, Lawler, Pevzner (1997), [Approximation Algorithms for Multiple Sequence Alignment](https://doi.org/10.1016/S0304-3975(97)00023-6) | theory and algorithm | `lean4-bafna1997` | to do | - |
-| 10 | Stoye (1998), [Multiple Sequence Alignment with the Divide-and-Conquer Method](https://doi.org/10.1016/S0378-1119(98)00097-3) | theory and algorithm | `lean4-stoye1998` | to do | - |
-| 11 | Lancia, Ravi (1999), [GESTALT: Genomic Steiner Alignments](https://doi.org/10.1007/3-540-48452-3_8) | theory and algorithm | `lean4-gestalt` | to do | - |
-| 12 | Kececioglu, Starrett (2004), [Aligning Alignments Exactly](https://doi.org/10.1145/974614.974626) | theory and algorithm | `lean4-kececioglu2004` | to do | - |
+| 1 | Sankoff (1975), [Minimal Mutation Trees of Sequences](https://doi.org/10.1137/0128004) | theory and algorithm | `lean4-sankoff1975` | to do | - |
+| 2 | Sankoff, Cedergren (1983), [Simultaneous Comparison of Three or More Sequences Related by a Tree](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575862174.shtml) | theory and algorithm | `lean4-sankoff1983` | to do | - |
+| 3 | Carrillo, Lipman (1988), [The Multiple Sequence Alignment Problem in Biology](https://doi.org/10.1137/0148063) | theory and algorithm | `lean4-carrillo1988` | to do | - |
+| 4 | Altschul (1989), [Gap Costs for Multiple Sequence Alignment](https://doi.org/10.1016/S0022-5193(89)80196-1) | theory | `lean4-altschul1989` | to do | - |
+| 5 | Altschul, Lipman (1989), [Trees, Stars, and Multiple Biological Sequence Alignment](https://doi.org/10.1137/0149012) | theory and algorithm | `lean4-altschul1989-stars` | to do | - |
+| 6 | Pevzner (1992), [Multiple Alignment, Communication Cost, and Graph Matching](https://doi.org/10.1137/0152101) | theory and algorithm | `lean4-pevzner1992` | to do | - |
+| 7 | Gusfield (1993), [Efficient Methods for Multiple Sequence Alignment with Guaranteed Error Bounds](https://doi.org/10.1007/BF02460299) | theory and algorithm | `lean4-gusfield1993` | to do | - |
+| 8 | Kececioglu (1993), [The Maximum Weight Trace Problem in Multiple Sequence Alignment](https://doi.org/10.1007/BFb0029800) | theory and algorithm | `lean4-kececioglu1993` | to do | - |
+| 9 | Wang, Jiang (1994), [On the Complexity of Multiple Sequence Alignment](https://doi.org/10.1089/cmb.1994.1.337) | theory | `lean4-wang1994` | to do | - |
+| 10 | Bafna, Lawler, Pevzner (1997), [Approximation Algorithms for Multiple Sequence Alignment](https://doi.org/10.1016/S0304-3975(97)00023-6) | theory and algorithm | `lean4-bafna1997` | to do | - |
+| 11 | Stoye (1998), [Multiple Sequence Alignment with the Divide-and-Conquer Method](https://doi.org/10.1016/S0378-1119(98)00097-3) | theory and algorithm | `lean4-stoye1998` | to do | - |
+| 12 | Lancia, Ravi (1999), [GESTALT: Genomic Steiner Alignments](https://doi.org/10.1007/3-540-48452-3_8) | theory and algorithm | `lean4-gestalt` | to do | - |
+| 13 | Kececioglu, Starrett (2004), [Aligning Alignments Exactly](https://doi.org/10.1145/974614.974626) | theory and algorithm | `lean4-kececioglu2004` | to do | - |
 
 ### 9. Alignment uncertainty, consensus, accuracy metrics and filtering
 
@@ -307,7 +307,7 @@ Priority: emerging.
 | 2 | Becker, Stanke (2022), [learnMSA: Learning and Aligning Large Protein Families](https://doi.org/10.1093/gigascience/giac104) | method | `lean4-learnmsa` | to do | - |
 | 3 | Becker, Stanke (2024), [learnMSA2: Deep Protein Multiple Alignments with Large Language and Hidden Markov Models](https://doi.org/10.1093/bioinformatics/btae381) | method | `lean4-learnmsa2` | to do | learnMSA |
 | 4 | Sinha (2026), [BABAPPAlign: A Multiple Sequence Alignment Engine with a Learned Residue-Level Scoring Function](https://doi.org/10.1093/bioinformatics/btag189) | method | `lean4-babappalign` | to do | - |
-| 5 | Hoang, Armour-Garb, Singh (2026), [ARIES: Fast and Accurate Construction of Multiple Sequence Alignments from Protein Language Embeddings](https://doi.org/10.1101/gr.282254.126) | method | `lean4-aries` | to do | - |
+| 5 | Hoang, Armour-Garb, Singh (2026), [Fast and Accurate Construction of Multiple Sequence Alignments from Protein Language Embeddings with ARIES](https://doi.org/10.1101/gr.282254.126) | method | `lean4-aries` | to do | - |
 
 <!-- END catalog:papers -->
 

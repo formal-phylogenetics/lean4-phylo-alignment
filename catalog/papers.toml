@@ -4,9 +4,7 @@
 #
 # Started on 2026-11-25 from the maintainer's list. Authors, years, titles and links are the list's,
 # checked against Crossref, which gave the links that the list lacked. Each formalization records the
-# exact citation in its Phase 0, and corrects the entry here. Sankoff (1975), Minimal Mutation Trees of
-# Sequences, which the list places in family 8, is in the catalog of lean4-phylo-gene-tree (family 3),
-# since a paper is in one catalog.
+# exact citation in its Phase 0, and corrects the entry here.
 #
 # Fields of a paper:
 #   id          the repository is lean4-<id>: the method's name in lower case when the paper names
@@ -906,7 +904,7 @@ short = "MAFFT"
 authors = "Katoh et al."
 year = "2002"
 title = "MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform"
-url = "https://doi.org/10.1093/nar/30.14.3059"
+url = "https://doi.org/10.1093/nar/gkf436"
 kind = "method"
 root = "Mafft"
 status = "todo"
@@ -1062,7 +1060,7 @@ order = 20
 short = "Kalign 3"
 authors = "Lassmann"
 year = "2020"
-title = "Kalign 3: Multiple Sequence Alignment of Large Data Sets"
+title = "Kalign 3: Multiple Sequence Alignment of Large Datasets"
 url = "https://doi.org/10.1093/bioinformatics/btz795"
 kind = "method"
 root = "Kalign3"
@@ -1454,9 +1452,21 @@ builds_on = ["wfa"]
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
-id = "sankoff1983"
+id = "sankoff1975"
 family = 8
 order = 1
+authors = "Sankoff"
+year = "1975"
+title = "Minimal Mutation Trees of Sequences"
+url = "https://doi.org/10.1137/0128004"
+kind = "theory+algorithm"
+root = "Sankoff1975"
+status = "todo"
+
+[[paper]]
+id = "sankoff1983"
+family = 8
+order = 2
 authors = "Sankoff, Cedergren"
 year = "1983"
 title = "Simultaneous Comparison of Three or More Sequences Related by a Tree"
@@ -1469,7 +1479,7 @@ note = "A chapter of D. Sankoff, J. B. Kruskal (eds.), Time Warps, String Edits,
 [[paper]]
 id = "carrillo1988"
 family = 8
-order = 2
+order = 3
 authors = "Carrillo, Lipman"
 year = "1988"
 title = "The Multiple Sequence Alignment Problem in Biology"
@@ -1481,7 +1491,7 @@ status = "todo"
 [[paper]]
 id = "altschul1989"
 family = 8
-order = 3
+order = 4
 authors = "Altschul"
 year = "1989"
 title = "Gap Costs for Multiple Sequence Alignment"
@@ -1493,7 +1503,7 @@ status = "todo"
 [[paper]]
 id = "altschul1989-stars"
 family = 8
-order = 4
+order = 5
 authors = "Altschul, Lipman"
 year = "1989"
 title = "Trees, Stars, and Multiple Biological Sequence Alignment"
@@ -1505,7 +1515,7 @@ status = "todo"
 [[paper]]
 id = "pevzner1992"
 family = 8
-order = 5
+order = 6
 authors = "Pevzner"
 year = "1992"
 title = "Multiple Alignment, Communication Cost, and Graph Matching"
@@ -1517,7 +1527,7 @@ status = "todo"
 [[paper]]
 id = "gusfield1993"
 family = 8
-order = 6
+order = 7
 authors = "Gusfield"
 year = "1993"
 title = "Efficient Methods for Multiple Sequence Alignment with Guaranteed Error Bounds"
@@ -1529,7 +1539,7 @@ status = "todo"
 [[paper]]
 id = "kececioglu1993"
 family = 8
-order = 7
+order = 8
 authors = "Kececioglu"
 year = "1993"
 title = "The Maximum Weight Trace Problem in Multiple Sequence Alignment"
@@ -1541,7 +1551,7 @@ status = "todo"
 [[paper]]
 id = "wang1994"
 family = 8
-order = 8
+order = 9
 authors = "Wang, Jiang"
 year = "1994"
 title = "On the Complexity of Multiple Sequence Alignment"
@@ -1553,7 +1563,7 @@ status = "todo"
 [[paper]]
 id = "bafna1997"
 family = 8
-order = 9
+order = 10
 authors = "Bafna, Lawler, Pevzner"
 year = "1997"
 title = "Approximation Algorithms for Multiple Sequence Alignment"
@@ -1565,7 +1575,7 @@ status = "todo"
 [[paper]]
 id = "stoye1998"
 family = 8
-order = 10
+order = 11
 authors = "Stoye"
 year = "1998"
 title = "Multiple Sequence Alignment with the Divide-and-Conquer Method"
@@ -1577,7 +1587,7 @@ status = "todo"
 [[paper]]
 id = "gestalt"
 family = 8
-order = 11
+order = 12
 short = "GESTALT"
 authors = "Lancia, Ravi"
 year = "1999"
@@ -1590,7 +1600,7 @@ status = "todo"
 [[paper]]
 id = "kececioglu2004"
 family = 8
-order = 12
+order = 13
 authors = "Kececioglu, Starrett"
 year = "2004"
 title = "Aligning Alignments Exactly"
@@ -2120,7 +2130,7 @@ order = 5
 short = "ARIES"
 authors = "Hoang, Armour-Garb, Singh"
 year = "2026"
-title = "ARIES: Fast and Accurate Construction of Multiple Sequence Alignments from Protein Language Embeddings"
+title = "Fast and Accurate Construction of Multiple Sequence Alignments from Protein Language Embeddings with ARIES"
 url = "https://doi.org/10.1101/gr.282254.126"
 kind = "method"
 root = "Aries"
