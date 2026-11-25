@@ -1,21 +1,21 @@
 # Sequence alignment, in Lean
 
-[![CI](https://github.com/vltanh/lean4-phylo-alignment/actions/workflows/ci.yml/badge.svg)](https://github.com/vltanh/lean4-phylo-alignment/actions/workflows/ci.yml)
+[![CI](https://github.com/formal-phylogenetics/lean4-phylo-alignment/actions/workflows/ci.yml/badge.svg)](https://github.com/formal-phylogenetics/lean4-phylo-alignment/actions/workflows/ci.yml)
 
 Lean 4 formalizations of papers on multiple sequence alignment: the estimation of homology between
 sequences, models of insertion and deletion, and the joint estimation of alignments and trees.
 
 This repository is a hub of inference in the collection rooted at
-[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics). It holds the library
-[`PhyloAlignment`](PhyloAlignment), for what two or more of its papers share and the root library
-does not hold. It has no modules yet; its [README](PhyloAlignment/README.md) says what goes there,
-and the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which the tables
-below are generated.
+[lean4-phylogenetics](https://github.com/formal-phylogenetics/lean4-phylogenetics). It holds the
+library [`PhyloAlignment`](PhyloAlignment), for what two or more of its papers share and the root
+library does not hold. It has no modules yet; its [README](PhyloAlignment/README.md) says what goes
+there, and the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which the
+tables below are generated.
 
 The collection's
-[conventions](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) and
-[workflow](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/WORKFLOW.md) are in the
-root. Each paper is formalized with the
+[conventions](https://github.com/formal-phylogenetics/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) and
+[workflow](https://github.com/formal-phylogenetics/lean4-phylogenetics/blob/main/docs/WORKFLOW.md)
+are in the root. Each paper is formalized with the
 [formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill: its results are proved
 by the paper's own arguments, and an audit reports its errors and gaps.
 
@@ -45,8 +45,10 @@ by the paper's own arguments, and an audit reports its errors and gaps.
 ## The papers
 
 Each paper is in the family of its method, with the theory of that method. The identifiability of
-indel models is in [lean4-phylo-algebraic](https://github.com/vltanh/lean4-phylo-algebraic), and
-their consistency in [lean4-phylo-statistics](https://github.com/vltanh/lean4-phylo-statistics).
+indel models is in
+[lean4-phylo-algebraic](https://github.com/formal-phylogenetics/lean4-phylo-algebraic), and their
+consistency in
+[lean4-phylo-statistics](https://github.com/formal-phylogenetics/lean4-phylo-statistics).
 Whole-genome alignment, read mapping, phylogenetic placement, metagenomics and sequence simulators
 are outside the hub. *Uses* lists the papers, of any hub, whose results a paper's proofs are known
 to use, and the other hubs whose library it requires.
@@ -295,8 +297,8 @@ Priority: emerging.
 
 ## Starting a paper
 
-From [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics), when the paper's
-formalization starts:
+From [lean4-phylogenetics](https://github.com/formal-phylogenetics/lean4-phylogenetics), when the
+paper's formalization starts:
 
 ```sh
 python3 scripts/status.py next               # the open papers, by priority
