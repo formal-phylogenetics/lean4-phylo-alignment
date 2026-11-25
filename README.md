@@ -37,34 +37,38 @@ against the paper, and an audit of the paper reports its errors and gaps.
 | --- | ---: | ---: | ---: | ---: | ---: |
 | [1. Divide-and-conquer alignment and scalable phylogenetic co-estimation](#1-divide-and-conquer-alignment-and-scalable-phylogenetic-co-estimation) | 8 | 0 | 0 | 0 | 8 |
 | [2. Profile HMM ensembles, backbone alignment and fragmentary sequences](#2-profile-hmm-ensembles-backbone-alignment-and-fragmentary-sequences) | 12 | 0 | 0 | 0 | 12 |
-| [3. Statistical alignment, evolutionary indel models and identifiability](#3-statistical-alignment-evolutionary-indel-models-and-identifiability) | 16 | 0 | 0 | 0 | 16 |
+| [3. Statistical alignment and evolutionary indel models](#3-statistical-alignment-and-evolutionary-indel-models) | 13 | 0 | 0 | 0 | 13 |
 | [4. Phylogeny-aware alignment and joint statistical estimation](#4-phylogeny-aware-alignment-and-joint-statistical-estimation) | 18 | 0 | 0 | 0 | 18 |
 | [5. Progressive alignment and iterative refinement](#5-progressive-alignment-and-iterative-refinement) | 21 | 0 | 0 | 0 | 21 |
 | [6. Consistency-based, posterior-probability and graph-based alignment](#6-consistency-based-posterior-probability-and-graph-based-alignment) | 15 | 0 | 0 | 0 | 15 |
 | [7. Pairwise alignment and dynamic programming foundations](#7-pairwise-alignment-and-dynamic-programming-foundations) | 13 | 0 | 0 | 0 | 13 |
 | [8. Exact multiple alignment, computational complexity and approximation algorithms](#8-exact-multiple-alignment-computational-complexity-and-approximation-algorithms) | 13 | 0 | 0 | 0 | 13 |
 | [9. Alignment uncertainty, consensus, accuracy metrics and filtering](#9-alignment-uncertainty-consensus-accuracy-metrics-and-filtering) | 13 | 0 | 0 | 0 | 13 |
-| [10. Statistical limitations and the impact of alignment on phylogenetic inference](#10-statistical-limitations-and-the-impact-of-alignment-on-phylogenetic-inference) | 10 | 0 | 0 | 0 | 10 |
+| [10. Alignment error and its impact on phylogenetic inference](#10-alignment-error-and-its-impact-on-phylogenetic-inference) | 10 | 0 | 0 | 0 | 10 |
 | [11. RNA, codon and structure-aware alignment](#11-rna-codon-and-structure-aware-alignment) | 12 | 0 | 0 | 0 | 12 |
 | [12. Machine learning and learned statistical alignment models](#12-machine-learning-and-learned-statistical-alignment-models) | 5 | 0 | 0 | 0 | 5 |
-| **All** | **156** | **0** | **0** | **0** | **156** |
+| **All** | **153** | **0** | **0** | **0** | **153** |
 
 <!-- END catalog:summary -->
 
 ## The papers
 
-Each paper is in one family, the one its method belongs to, even when it touches others. Theory
-papers (identifiability, complexity, approximation guarantees) are listed with the methods they
-support, and evaluations of methods with the methods they assess. The scope is the estimation of
-alignments and homology, the models of insertion and deletion, and the joint estimation of alignments
-and trees. Whole-genome alignment, the mapping of sequencing reads, phylogenetic placement,
-metagenomics and simulators of sequences are outside it. The estimation of a tree from an alignment is
-in [lean4-phylo-gene-tree](https://github.com/vltanh/lean4-phylo-gene-tree), species trees are in
-[lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree), and networks in
-[lean4-phylo-network](https://github.com/vltanh/lean4-phylo-network). The pairwise alignments of
-family 7 and the indel models of family 3 are foundations of this hub: what several papers use of
-them goes to its library. *Uses* lists the papers, of any hub, that the paper's proofs are known to
-use, and the other hubs whose library it requires. Each paper's inventory completes the list.
+Each paper is in one family, the one its method belongs to, even when it touches others. This is a
+hub of inference: the theory of a method (its complexity, its approximation guarantees) is listed
+with the method, and evaluations of methods with the methods they assess; general results on indel
+models are in the hubs of theory, their identifiability in
+[lean4-phylo-algebraic](https://github.com/vltanh/lean4-phylo-algebraic) and their consistency in
+[lean4-phylo-statistics](https://github.com/vltanh/lean4-phylo-statistics). The scope is the
+estimation of alignments and homology, the models of insertion and deletion, and the joint estimation
+of alignments and trees. Whole-genome alignment, the mapping of sequencing reads, phylogenetic
+placement, metagenomics and simulators of sequences are outside it. The estimation of a tree from an
+alignment is in [lean4-phylo-gene-tree](https://github.com/vltanh/lean4-phylo-gene-tree), species
+trees are in [lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree), and
+networks in [lean4-phylo-network](https://github.com/vltanh/lean4-phylo-network). The pairwise
+alignments of family 7 are a foundation of this hub, and the indel models of family 3 one of the
+whole collection: what several papers use of them goes to this hub's library and to the root library.
+*Uses* lists the papers, of any hub, that the paper's proofs are known to use, and the other hubs
+whose library it requires. Each paper's inventory completes the list.
 
 <!-- BEGIN catalog:papers -->
 <!-- Generated by lean4-phylogenetics/scripts/status.py readme --write. Do not edit. -->
@@ -103,7 +107,7 @@ Priority: highest.
 | 11 | Park, Warnow (2023), [HMMerge: An Ensemble Method for Multiple Sequence Alignment](https://doi.org/10.1093/bioadv/vbad052) | method | `lean4-hmmerge` | to do | UPP |
 | 12 | Shen et al. (2023), [EMMA: A New Method for Computing Multiple Sequence Alignments Given a Constraint Subset Alignment](https://doi.org/10.1186/s13015-023-00247-x) | method | `lean4-emma` | to do | - |
 
-### 3. Statistical alignment, evolutionary indel models and identifiability
+### 3. Statistical alignment and evolutionary indel models
 
 Priority: high.
 
@@ -117,14 +121,11 @@ Priority: high.
 | 6 | Holmes, Bruno (2001), [Evolutionary HMMs: A Bayesian Approach to Multiple Alignment](https://doi.org/10.1093/bioinformatics/17.9.803) | theory and algorithm | `lean4-holmes2001` | to do | - |
 | 7 | Lunter et al. (2003), [An Efficient Algorithm for Statistical Multiple Alignment on Arbitrary Phylogenetic Trees](https://doi.org/10.1089/106652703322756122) | theory and algorithm | `lean4-lunter2003` | to do | TKF91 |
 | 8 | Miklós, Lunter, Holmes (2004), [A Long Indel Model for Evolutionary Sequence Alignment](https://doi.org/10.1093/molbev/msh043) | theory and algorithm | `lean4-miklos2004` | to do | - |
-| 9 | Thatte (2006), [Invertibility of the TKF Model of Sequence Evolution](https://doi.org/10.1016/j.mbs.2005.12.025) | theory | `lean4-thatte2006` | to do | TKF91 |
-| 10 | Rivas, Eddy (2008), [Probabilistic Phylogenetic Inference with Insertions and Deletions](https://doi.org/10.1371/journal.pcbi.1000172) | theory and algorithm | `lean4-rivas2008` | to do | - |
-| 11 | Andoni et al. (2010), [Global Alignment of Molecular Sequences via Ancestral State Reconstruction](https://hdl.handle.net/1721.1/74010) | theory and algorithm | `lean4-andoni2010` | to do | - |
-| 12 | Westesson et al. (2012), [Accurate Reconstruction of Insertion–Deletion Histories by Statistical Phylogenetics](https://doi.org/10.1371/journal.pone.0034572) | theory and algorithm | `lean4-westesson2012` | to do | - |
-| 13 | Bouchard-Côté, Jordan (2013), [Evolutionary Inference via the Poisson Indel Process (PIP)](https://doi.org/10.1073/pnas.1220450110) | theory and algorithm | `lean4-pip` | to do | - |
-| 14 | Fan, Legried, Roch (2020), [Impossibility of Consistent Distance Estimation from Sequence Lengths Under the TKF91 Model](https://doi.org/10.1007/s11538-020-00801-3) | theory | `lean4-fan2020` | to do | TKF91 |
-| 15 | De Maio (2021), [The Cumulative Indel Model: Fast and Accurate Statistical Evolutionary Alignment](https://doi.org/10.1093/sysbio/syaa050) | theory and algorithm | `lean4-demaio2021` | to do | - |
-| 16 | Xue, Legried, Fan (2026), [Joint Identifiability of Ancestral Sequence, Phylogeny, and Mutation Rates Under an Indel Model](https://doi.org/10.1177/15578666261504447) | theory and algorithm | `lean4-xue2026` | to do | - |
+| 9 | Rivas, Eddy (2008), [Probabilistic Phylogenetic Inference with Insertions and Deletions](https://doi.org/10.1371/journal.pcbi.1000172) | theory and algorithm | `lean4-rivas2008` | to do | - |
+| 10 | Andoni et al. (2010), [Global Alignment of Molecular Sequences via Ancestral State Reconstruction](https://hdl.handle.net/1721.1/74010) | theory and algorithm | `lean4-andoni2010` | to do | - |
+| 11 | Westesson et al. (2012), [Accurate Reconstruction of Insertion–Deletion Histories by Statistical Phylogenetics](https://doi.org/10.1371/journal.pone.0034572) | theory and algorithm | `lean4-westesson2012` | to do | - |
+| 12 | Bouchard-Côté, Jordan (2013), [Evolutionary Inference via the Poisson Indel Process (PIP)](https://doi.org/10.1073/pnas.1220450110) | theory and algorithm | `lean4-pip` | to do | - |
+| 13 | De Maio (2021), [The Cumulative Indel Model: Fast and Accurate Statistical Evolutionary Alignment](https://doi.org/10.1093/sysbio/syaa050) | theory and algorithm | `lean4-demaio2021` | to do | - |
 
 ### 4. Phylogeny-aware alignment and joint statistical estimation
 
@@ -261,7 +262,7 @@ Priority: high.
 | 12 | Tan et al. (2015), [Current Methods for Automated Filtering of Multiple Sequence Alignments Frequently Worsen Single-Gene Phylogenetic Inference](https://doi.org/10.1093/sysbio/syv033) | evaluation | `lean4-tan2015` | to do | - |
 | 13 | Steenwyk et al. (2020), [ClipKIT: A Multiple Sequence Alignment Trimming Software for Accurate Phylogenomic Inference](https://doi.org/10.1371/journal.pbio.3001007) | method | `lean4-clipkit` | to do | - |
 
-### 10. Statistical limitations and the impact of alignment on phylogenetic inference
+### 10. Alignment error and its impact on phylogenetic inference
 
 Priority: high.
 

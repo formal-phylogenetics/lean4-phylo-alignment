@@ -42,7 +42,7 @@ priority = "highest"
 
 [[family]]
 id = 3
-title = "Statistical alignment, evolutionary indel models and identifiability"
+title = "Statistical alignment and evolutionary indel models"
 priority = "high"
 
 [[family]]
@@ -77,7 +77,7 @@ priority = "high"
 
 [[family]]
 id = 10
-title = "Statistical limitations and the impact of alignment on phylogenetic inference"
+title = "Alignment error and its impact on phylogenetic inference"
 priority = "high"
 
 [[family]]
@@ -363,7 +363,7 @@ root = "Emma"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 3. Statistical alignment, evolutionary indel models and identifiability
+# 3. Statistical alignment and evolutionary indel models
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
@@ -470,23 +470,9 @@ root = "Miklos2004"
 status = "todo"
 
 [[paper]]
-id = "thatte2006"
-family = 3
-order = 9
-authors = "Thatte"
-year = "2006"
-title = "Invertibility of the TKF Model of Sequence Evolution"
-url = "https://doi.org/10.1016/j.mbs.2005.12.025"
-kind = "theory"
-root = "Thatte2006"
-status = "todo"
-builds_on = ["thorne1991"]
-note = "With Fan, Legried, Roch 2020 (fan2020): the identifiability of the TKF91 model and the consistent estimation of distances from ever longer sequences are different properties."
-
-[[paper]]
 id = "rivas2008"
 family = 3
-order = 10
+order = 9
 authors = "Rivas, Eddy"
 year = "2008"
 title = "Probabilistic Phylogenetic Inference with Insertions and Deletions"
@@ -498,7 +484,7 @@ status = "todo"
 [[paper]]
 id = "andoni2010"
 family = 3
-order = 11
+order = 10
 authors = "Andoni et al."
 year = "2010"
 title = "Global Alignment of Molecular Sequences via Ancestral State Reconstruction"
@@ -511,7 +497,7 @@ note = "In Innovations in Computer Science 2010, with no DOI: the link is the pa
 [[paper]]
 id = "westesson2012"
 family = 3
-order = 12
+order = 11
 authors = "Westesson et al."
 year = "2012"
 title = "Accurate Reconstruction of Insertion–Deletion Histories by Statistical Phylogenetics"
@@ -523,7 +509,7 @@ status = "todo"
 [[paper]]
 id = "pip"
 family = 3
-order = 13
+order = 12
 short = "PIP"
 authors = "Bouchard-Côté, Jordan"
 year = "2013"
@@ -534,41 +520,15 @@ root = "Pip"
 status = "todo"
 
 [[paper]]
-id = "fan2020"
-family = 3
-order = 14
-authors = "Fan, Legried, Roch"
-year = "2020"
-title = "Impossibility of Consistent Distance Estimation from Sequence Lengths Under the TKF91 Model"
-url = "https://doi.org/10.1007/s11538-020-00801-3"
-kind = "theory"
-root = "Fan2020"
-status = "todo"
-builds_on = ["thorne1991"]
-note = "With Thatte 2006 (thatte2006): the identifiability of the TKF91 model and the consistent estimation of distances from ever longer sequences are different properties."
-
-[[paper]]
 id = "demaio2021"
 family = 3
-order = 15
+order = 13
 authors = "De Maio"
 year = "2021"
 title = "The Cumulative Indel Model: Fast and Accurate Statistical Evolutionary Alignment"
 url = "https://doi.org/10.1093/sysbio/syaa050"
 kind = "theory+algorithm"
 root = "DeMaio2021"
-status = "todo"
-
-[[paper]]
-id = "xue2026"
-family = 3
-order = 16
-authors = "Xue, Legried, Fan"
-year = "2026"
-title = "Joint Identifiability of Ancestral Sequence, Phylogeny, and Mutation Rates Under an Indel Model"
-url = "https://doi.org/10.1177/15578666261504447"
-kind = "theory+algorithm"
-root = "Xue2026"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
@@ -1781,7 +1741,7 @@ root = "ClipKit"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 10. Statistical limitations and the impact of alignment on phylogenetic inference
+# 10. Alignment error and its impact on phylogenetic inference
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
