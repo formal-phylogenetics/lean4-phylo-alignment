@@ -2,31 +2,22 @@
 
 [![CI](https://github.com/vltanh/lean4-phylo-alignment/actions/workflows/ci.yml/badge.svg)](https://github.com/vltanh/lean4-phylo-alignment/actions/workflows/ci.yml)
 
-Lean 4 formalizations of the methods and theory of multiple sequence alignment: the estimation of
-homology between sequences, the models of insertion and deletion, and the joint estimation of
-alignments and trees, one paper per repository. They start with divide-and-conquer alignment and the
-co-estimation of alignments and trees at scale, and with ensembles of profile hidden Markov models for
-fragmentary sequences; continue with statistical alignment under indel models, phylogeny-aware
-alignment, progressive alignment, and consistency-based and graph-based alignment; then pairwise
-alignment by dynamic programming, and the complexity of multiple alignment with its exact and
-approximation algorithms; and end with alignment uncertainty and filtering, the effect of alignment on
-tree estimation, the alignment of RNA, coding sequences and structures, and learned alignment models.
+Lean 4 formalizations of papers on multiple sequence alignment: the estimation of homology between
+sequences, models of insertion and deletion, and the joint estimation of alignments and trees.
 
-This repository is their hub, in the collection rooted at
-[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics). It holds:
+This repository is a hub of inference in the collection rooted at
+[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics). It holds the library
+[`PhyloAlignment`](PhyloAlignment), for what two or more of its papers share and the root library
+does not hold. It has no modules yet; its [README](PhyloAlignment/README.md) says what goes there,
+and the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which the tables
+below are generated.
 
-- the library [`PhyloAlignment`](PhyloAlignment), for what two papers or more of this hub share and the root library
-  does not hold. It has nothing yet: what they share so far (the trees on which sequences evolve, and guide trees) is in the root library.
-  Its [README](PhyloAlignment/README.md) says what goes there;
-- the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which the tables
-  below are generated.
-
-The [conventions](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) that
-every repository follows, the [workflow](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/WORKFLOW.md),
-the registry of the repositories, the shared foundations and the tools are in the root. Each paper is
-formalized with the [formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill:
-every result the paper proves is proved by the paper's own argument, the statements are checked
-against the paper, and an audit of the paper reports its errors and gaps.
+The collection's
+[conventions](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) and
+[workflow](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/WORKFLOW.md) are in the
+root. Each paper is formalized with the
+[formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill: its results are proved
+by the paper's own arguments, and an audit reports its errors and gaps.
 
 ## Status
 
@@ -53,22 +44,12 @@ against the paper, and an audit of the paper reports its errors and gaps.
 
 ## The papers
 
-Each paper is in one family, the one its method belongs to, even when it touches others. This is a
-hub of inference: the theory of a method (its complexity, its approximation guarantees) is listed
-with the method, and evaluations of methods with the methods they assess; general results on indel
-models are in the hubs of theory, their identifiability in
-[lean4-phylo-algebraic](https://github.com/vltanh/lean4-phylo-algebraic) and their consistency in
-[lean4-phylo-statistics](https://github.com/vltanh/lean4-phylo-statistics). The scope is the
-estimation of alignments and homology, the models of insertion and deletion, and the joint estimation
-of alignments and trees. Whole-genome alignment, the mapping of sequencing reads, phylogenetic
-placement, metagenomics and simulators of sequences are outside it. The estimation of a tree from an
-alignment is in [lean4-phylo-gene-tree](https://github.com/vltanh/lean4-phylo-gene-tree), species
-trees are in [lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree), and
-networks in [lean4-phylo-network](https://github.com/vltanh/lean4-phylo-network). The pairwise
-alignments of family 7 are a foundation of this hub, and the indel models of family 3 one of the
-whole collection: what several papers use of them goes to this hub's library and to the root library.
-*Uses* lists the papers, of any hub, that the paper's proofs are known to use, and the other hubs
-whose library it requires. Each paper's inventory completes the list.
+Each paper is in the family of its method, with the theory of that method. The identifiability of
+indel models is in [lean4-phylo-algebraic](https://github.com/vltanh/lean4-phylo-algebraic), and
+their consistency in [lean4-phylo-statistics](https://github.com/vltanh/lean4-phylo-statistics).
+Whole-genome alignment, read mapping, phylogenetic placement, metagenomics and sequence simulators
+are outside the hub. *Uses* lists the papers, of any hub, whose results a paper's proofs are known
+to use, and the other hubs whose library it requires.
 
 <!-- BEGIN catalog:papers -->
 <!-- Generated by lean4-phylogenetics/scripts/status.py readme --write. Do not edit. -->
@@ -314,13 +295,13 @@ Priority: emerging.
 
 ## Starting a paper
 
-From [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics), beside this repository,
-when the paper's formalization starts:
+From [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics), when the paper's
+formalization starts:
 
 ```sh
-python3 scripts/status.py next              # the open papers, by priority, with what each waits on
-python3 scripts/new_paper.py needleman1970  # creates ../lean4-needleman1970 on the train, under this hub
-cd ../lean4-needleman1970 && claude         # then: /formalize-math-paper https://doi.org/10.1016/0022-2836(70)90057-4
+python3 scripts/status.py next               # the open papers, by priority
+python3 scripts/new_paper.py <id>            # creates ../papers/alignment/lean4-<id>
+cd ../papers/alignment/lean4-<id> && claude  # then: /formalize-math-paper <the paper's link>
 ```
 
 ## Building
@@ -332,18 +313,18 @@ lake build Phylogenetics
 lake env lean scripts/Audit.lean
 ```
 
-Lean and Mathlib `v4.37.0-rc1`; [`lakefile.toml`](lakefile.toml) requires lean4-phylogenetics by
-commit, `3fcabfd`. The audit, [`scripts/Audit.lean`](scripts/Audit.lean), checks that every
-declaration of this library and of lean4-phylogenetics depends only on Lean's standard axioms
-`propext`, `Classical.choice` and `Quot.sound`; `python3 scripts/gen_audit.py` generates its
-`import all` lines. CI runs the build and the audit, and checks that the tables above are current.
+Lean and Mathlib `v4.37.0-rc1`. [`lakefile.toml`](lakefile.toml) requires lean4-phylogenetics at the
+commits of the train. The audit, [`scripts/Audit.lean`](scripts/Audit.lean), checks that every
+declaration of this library and of the libraries it requires uses only Lean's standard axioms;
+`python3 scripts/gen_audit.py` writes its `import all` lines. CI builds the library, runs the audit,
+and checks that the tables above are current.
 
 ## Credits
 
-- **Maintainer:** The-Anh Vu-Le.
-- **Catalog and repository:** Claude Opus 5.5 (`claude-opus-5-5`, Anthropic), in Claude Code, from the
-  maintainer's list of papers, with the citations checked against Crossref.
-- **Formalization:** each paper's repository credits its own.
+- Maintainer: The-Anh Vu-Le.
+- Catalog and repository: Claude Opus 5.5 (`claude-opus-5-5`, Anthropic) in Claude Code, from the
+  maintainer's lists of papers, with the citations checked against Crossref.
+- Formalization: each paper's repository credits its own.
 
 ## License
 
