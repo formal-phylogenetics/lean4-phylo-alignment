@@ -32,67 +32,39 @@
 
 [[family]]
 id = 1
-title = "Divide-and-conquer alignment and scalable phylogenetic co-estimation"
+title = "Scalable alignment"
 priority = "highest"
 
 [[family]]
 id = 2
-title = "Profile HMM ensembles, backbone alignment and fragmentary sequences"
-priority = "highest"
+title = "Statistical alignment"
+priority = "high"
 
 [[family]]
 id = 3
-title = "Statistical alignment and evolutionary indel models"
+title = "Heuristic alignment"
 priority = "high"
 
 [[family]]
 id = 4
-title = "Phylogeny-aware alignment and joint statistical estimation"
-priority = "high"
+title = "Alignment optimization"
+priority = "foundational"
 
 [[family]]
 id = 5
-title = "Progressive alignment and iterative refinement"
+title = "Alignment quality"
 priority = "high"
 
 [[family]]
 id = 6
-title = "Consistency-based, posterior-probability and graph-based alignment"
-priority = "high"
-
-[[family]]
-id = 7
-title = "Pairwise alignment and dynamic programming foundations"
-priority = "foundational"
-
-[[family]]
-id = 8
-title = "Exact multiple alignment, computational complexity and approximation algorithms"
-priority = "high"
-
-[[family]]
-id = 9
-title = "Alignment uncertainty, consensus, accuracy metrics and filtering"
-priority = "high"
-
-[[family]]
-id = 10
-title = "Alignment error and its impact on phylogenetic inference"
-priority = "high"
-
-[[family]]
-id = 11
-title = "RNA, codon and structure-aware alignment"
+title = "General and specialized alignment"
 priority = "secondary"
 
-[[family]]
-id = 12
-title = "Machine learning and learned statistical alignment models"
-priority = "emerging"
+# ---------------------------------------------------------------------------------------------
+# 1. Scalable alignment
+# ---------------------------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------------------------
-# 1. Divide-and-conquer alignment and scalable phylogenetic co-estimation
-# ---------------------------------------------------------------------------------------------
+# Divide-and-conquer alignment and scalable phylogenetic co-estimation
 
 [[paper]]
 id = "sate"
@@ -200,14 +172,12 @@ root = "RecursiveMagus"
 status = "todo"
 builds_on = ["magus"]
 
-# ---------------------------------------------------------------------------------------------
-# 2. Profile HMM ensembles, backbone alignment and fragmentary sequences
-# ---------------------------------------------------------------------------------------------
+# Profile HMM ensembles, backbone alignment and fragmentary sequences
 
 [[paper]]
 id = "krogh1994"
-family = 2
-order = 1
+family = 1
+order = 9
 authors = "Krogh et al."
 year = "1994"
 title = "Hidden Markov Models in Computational Biology: Applications to Protein Modeling"
@@ -218,8 +188,8 @@ status = "todo"
 
 [[paper]]
 id = "eddy1998"
-family = 2
-order = 2
+family = 1
+order = 10
 authors = "Eddy"
 year = "1998"
 title = "Profile Hidden Markov Models"
@@ -230,8 +200,8 @@ status = "todo"
 
 [[paper]]
 id = "eddy2011"
-family = 2
-order = 3
+family = 1
+order = 11
 authors = "Eddy"
 year = "2011"
 title = "Accelerated Profile HMM Searches"
@@ -242,8 +212,8 @@ status = "todo"
 
 [[paper]]
 id = "papara"
-family = 2
-order = 4
+family = 1
+order = 12
 short = "PaPaRa"
 authors = "Berger, Stamatakis"
 year = "2011"
@@ -255,8 +225,8 @@ status = "todo"
 
 [[paper]]
 id = "katoh2012"
-family = 2
-order = 5
+family = 1
+order = 13
 authors = "Katoh, Frith"
 year = "2012"
 title = "Adding Unaligned Sequences into an Existing Alignment Using MAFFT and LAST"
@@ -267,8 +237,8 @@ status = "todo"
 
 [[paper]]
 id = "upp"
-family = 2
-order = 6
+family = 1
+order = 14
 short = "UPP"
 authors = "Nguyen et al."
 year = "2015"
@@ -280,8 +250,8 @@ status = "todo"
 
 [[paper]]
 id = "magus-ehmms"
-family = 2
-order = 7
+family = 1
+order = 15
 short = "MAGUS+eHMMs"
 authors = "Shen, Zaharias, Warnow"
 year = "2022"
@@ -294,8 +264,8 @@ builds_on = ["magus", "upp"]
 
 [[paper]]
 id = "witch"
-family = 2
-order = 8
+family = 1
+order = 16
 short = "WITCH"
 authors = "Shen, Park, Warnow"
 year = "2022"
@@ -308,8 +278,8 @@ builds_on = ["upp", "magus"]
 
 [[paper]]
 id = "upp2"
-family = 2
-order = 9
+family = 1
+order = 17
 short = "UPP2"
 authors = "Park et al."
 year = "2023"
@@ -322,8 +292,8 @@ builds_on = ["upp"]
 
 [[paper]]
 id = "witch-ng"
-family = 2
-order = 10
+family = 1
+order = 18
 short = "WITCH-NG"
 authors = "Liu, Warnow"
 year = "2023"
@@ -337,8 +307,8 @@ note = "It replaces a heuristic optimization step of WITCH with an exact polynom
 
 [[paper]]
 id = "hmmerge"
-family = 2
-order = 11
+family = 1
+order = 19
 short = "HMMerge"
 authors = "Park, Warnow"
 year = "2023"
@@ -351,8 +321,8 @@ builds_on = ["upp"]
 
 [[paper]]
 id = "emma"
-family = 2
-order = 12
+family = 1
+order = 20
 short = "EMMA"
 authors = "Shen et al."
 year = "2023"
@@ -363,12 +333,14 @@ root = "Emma"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 3. Statistical alignment and evolutionary indel models
+# 2. Statistical alignment
 # ---------------------------------------------------------------------------------------------
+
+# Statistical alignment and evolutionary indel models
 
 [[paper]]
 id = "thorne1991"
-family = 3
+family = 2
 order = 1
 short = "TKF91"
 authors = "Thorne, Kishino, Felsenstein"
@@ -381,7 +353,7 @@ status = "todo"
 
 [[paper]]
 id = "thorne1992"
-family = 3
+family = 2
 order = 2
 short = "TKF92"
 authors = "Thorne, Kishino, Felsenstein"
@@ -395,7 +367,7 @@ builds_on = ["thorne1991"]
 
 [[paper]]
 id = "hein2000"
-family = 3
+family = 2
 order = 3
 authors = "Hein et al."
 year = "2000"
@@ -408,7 +380,7 @@ builds_on = ["thorne1991"]
 
 [[paper]]
 id = "steel2001"
-family = 3
+family = 2
 order = 4
 authors = "Steel, Hein"
 year = "2001"
@@ -421,7 +393,7 @@ builds_on = ["thorne1991"]
 
 [[paper]]
 id = "hein2001"
-family = 3
+family = 2
 order = 5
 authors = "Hein"
 year = "2001"
@@ -434,7 +406,7 @@ builds_on = ["thorne1991"]
 
 [[paper]]
 id = "holmes2001"
-family = 3
+family = 2
 order = 6
 authors = "Holmes, Bruno"
 year = "2001"
@@ -446,7 +418,7 @@ status = "todo"
 
 [[paper]]
 id = "lunter2003"
-family = 3
+family = 2
 order = 7
 authors = "Lunter et al."
 year = "2003"
@@ -459,7 +431,7 @@ builds_on = ["thorne1991"]
 
 [[paper]]
 id = "miklos2004"
-family = 3
+family = 2
 order = 8
 authors = "Miklós, Lunter, Holmes"
 year = "2004"
@@ -471,7 +443,7 @@ status = "todo"
 
 [[paper]]
 id = "rivas2008"
-family = 3
+family = 2
 order = 9
 authors = "Rivas, Eddy"
 year = "2008"
@@ -483,7 +455,7 @@ status = "todo"
 
 [[paper]]
 id = "andoni2010"
-family = 3
+family = 2
 order = 10
 authors = "Andoni et al."
 year = "2012"
@@ -496,7 +468,7 @@ note = "The journal version, in Stochastic Processes and their Applications 122(
 
 [[paper]]
 id = "westesson2012"
-family = 3
+family = 2
 order = 11
 authors = "Westesson et al."
 year = "2012"
@@ -508,7 +480,7 @@ status = "todo"
 
 [[paper]]
 id = "pip"
-family = 3
+family = 2
 order = 12
 short = "PIP"
 authors = "Bouchard-Côté, Jordan"
@@ -521,7 +493,7 @@ status = "todo"
 
 [[paper]]
 id = "demaio2021"
-family = 3
+family = 2
 order = 13
 authors = "De Maio"
 year = "2021"
@@ -531,14 +503,12 @@ kind = "theory+algorithm"
 root = "DeMaio2021"
 status = "todo"
 
-# ---------------------------------------------------------------------------------------------
-# 4. Phylogeny-aware alignment and joint statistical estimation
-# ---------------------------------------------------------------------------------------------
+# Phylogeny-aware alignment and joint statistical estimation
 
 [[paper]]
 id = "hein1990"
-family = 4
-order = 1
+family = 2
+order = 14
 authors = "Hein"
 year = "1990"
 title = "Unified Approach to Alignment and Phylogenies"
@@ -549,8 +519,8 @@ status = "todo"
 
 [[paper]]
 id = "wheeler1996"
-family = 4
-order = 2
+family = 2
+order = 15
 authors = "Wheeler"
 year = "1996"
 title = "Optimization Alignment: The End of Multiple Sequence Alignment in Phylogenetics?"
@@ -561,8 +531,8 @@ status = "todo"
 
 [[paper]]
 id = "satchmo"
-family = 4
-order = 3
+family = 2
+order = 16
 short = "SATCHMO"
 authors = "Edgar, Sjölander"
 year = "2003"
@@ -574,8 +544,8 @@ status = "todo"
 
 [[paper]]
 id = "loytynoja2005"
-family = 4
-order = 4
+family = 2
+order = 17
 authors = "Löytynoja, Goldman"
 year = "2005"
 title = "An Algorithm for Progressive Multiple Alignment of Sequences with Insertions"
@@ -586,8 +556,8 @@ status = "todo"
 
 [[paper]]
 id = "redelings2005"
-family = 4
-order = 5
+family = 2
+order = 18
 authors = "Redelings, Suchard"
 year = "2005"
 title = "Joint Bayesian Estimation of Alignment and Phylogeny"
@@ -598,8 +568,8 @@ status = "todo"
 
 [[paper]]
 id = "lunter2005"
-family = 4
-order = 6
+family = 2
+order = 19
 authors = "Lunter et al."
 year = "2005"
 title = "Bayesian Coestimation of Phylogeny and Sequence Alignment"
@@ -610,8 +580,8 @@ status = "todo"
 
 [[paper]]
 id = "fleissner2005"
-family = 4
-order = 7
+family = 2
+order = 20
 authors = "Fleissner, Metzler, von Haeseler"
 year = "2005"
 title = "Simultaneous Statistical Multiple Alignment and Phylogeny Reconstruction"
@@ -622,8 +592,8 @@ status = "todo"
 
 [[paper]]
 id = "bali-phy"
-family = 4
-order = 8
+family = 2
+order = 21
 short = "BAli-Phy"
 authors = "Suchard, Redelings"
 year = "2006"
@@ -636,8 +606,8 @@ builds_on = ["redelings2005"]
 
 [[paper]]
 id = "redelings2007"
-family = 4
-order = 9
+family = 2
+order = 22
 authors = "Redelings, Suchard"
 year = "2007"
 title = "Incorporating Indel Information into Phylogeny Estimation for Rapidly Emerging Pathogens"
@@ -648,8 +618,8 @@ status = "todo"
 
 [[paper]]
 id = "prank"
-family = 4
-order = 10
+family = 2
+order = 23
 short = "PRANK"
 authors = "Löytynoja, Goldman"
 year = "2008"
@@ -662,8 +632,8 @@ builds_on = ["loytynoja2005"]
 
 [[paper]]
 id = "loytynoja2008"
-family = 4
-order = 11
+family = 2
+order = 24
 authors = "Löytynoja, Goldman"
 year = "2008"
 title = "A Model of Evolution and Structure for Multiple Sequence Alignment"
@@ -674,8 +644,8 @@ status = "todo"
 
 [[paper]]
 id = "statalign"
-family = 4
-order = 12
+family = 2
+order = 25
 short = "StatAlign"
 authors = "Novák et al."
 year = "2008"
@@ -687,8 +657,8 @@ status = "todo"
 
 [[paper]]
 id = "poy4"
-family = 4
-order = 13
+family = 2
+order = 26
 short = "POY 4"
 authors = "Varón, Vinh, Wheeler"
 year = "2010"
@@ -700,8 +670,8 @@ status = "todo"
 
 [[paper]]
 id = "pagan"
-family = 4
-order = 14
+family = 2
+order = 27
 short = "PAGAN"
 authors = "Löytynoja, Vilella, Goldman"
 year = "2012"
@@ -713,8 +683,8 @@ status = "todo"
 
 [[paper]]
 id = "redelings2014"
-family = 4
-order = 15
+family = 2
+order = 28
 authors = "Redelings"
 year = "2014"
 title = "Erasing Errors Due to Alignment Ambiguity When Estimating Positive Selection"
@@ -725,8 +695,8 @@ status = "todo"
 
 [[paper]]
 id = "maiolo2018"
-family = 4
-order = 16
+family = 2
+order = 29
 authors = "Maiolo et al."
 year = "2018"
 title = "Progressive Multiple Sequence Alignment with Indel Evolution"
@@ -738,8 +708,8 @@ builds_on = ["pip"]
 
 [[paper]]
 id = "bali-phy3"
-family = 4
-order = 17
+family = 2
+order = 30
 short = "BAli-Phy 3"
 authors = "Redelings"
 year = "2021"
@@ -752,8 +722,8 @@ builds_on = ["bali-phy"]
 
 [[paper]]
 id = "propip"
-family = 4
-order = 18
+family = 2
+order = 31
 short = "ProPIP"
 authors = "Maiolo et al."
 year = "2021"
@@ -765,12 +735,14 @@ status = "todo"
 builds_on = ["maiolo2018"]
 
 # ---------------------------------------------------------------------------------------------
-# 5. Progressive alignment and iterative refinement
+# 3. Heuristic alignment
 # ---------------------------------------------------------------------------------------------
+
+# Progressive alignment and iterative refinement
 
 [[paper]]
 id = "hogeweg1984"
-family = 5
+family = 3
 order = 1
 authors = "Hogeweg, Hesper"
 year = "1984"
@@ -782,7 +754,7 @@ status = "todo"
 
 [[paper]]
 id = "barton1987"
-family = 5
+family = 3
 order = 2
 authors = "Barton, Sternberg"
 year = "1987"
@@ -794,7 +766,7 @@ status = "todo"
 
 [[paper]]
 id = "feng1987"
-family = 5
+family = 3
 order = 3
 authors = "Feng, Doolittle"
 year = "1987"
@@ -806,7 +778,7 @@ status = "todo"
 
 [[paper]]
 id = "clustal"
-family = 5
+family = 3
 order = 4
 short = "CLUSTAL"
 authors = "Higgins, Sharp"
@@ -819,7 +791,7 @@ status = "todo"
 
 [[paper]]
 id = "corpet1988"
-family = 5
+family = 3
 order = 5
 short = "MultAlin"
 authors = "Corpet"
@@ -832,7 +804,7 @@ status = "todo"
 
 [[paper]]
 id = "gotoh1993"
-family = 5
+family = 3
 order = 6
 authors = "Gotoh"
 year = "1993"
@@ -844,7 +816,7 @@ status = "todo"
 
 [[paper]]
 id = "clustalw"
-family = 5
+family = 3
 order = 7
 short = "CLUSTAL W"
 authors = "Thompson, Higgins, Gibson"
@@ -858,7 +830,7 @@ builds_on = ["clustal"]
 
 [[paper]]
 id = "mafft"
-family = 5
+family = 3
 order = 8
 short = "MAFFT"
 authors = "Katoh et al."
@@ -871,7 +843,7 @@ status = "todo"
 
 [[paper]]
 id = "muscle"
-family = 5
+family = 3
 order = 9
 short = "MUSCLE"
 authors = "Edgar"
@@ -884,7 +856,7 @@ status = "todo"
 
 [[paper]]
 id = "muscle-complexity"
-family = 5
+family = 3
 order = 10
 short = "MUSCLE"
 authors = "Edgar"
@@ -897,7 +869,7 @@ status = "todo"
 
 [[paper]]
 id = "mafft5"
-family = 5
+family = 3
 order = 11
 short = "MAFFT 5"
 authors = "Katoh et al."
@@ -911,7 +883,7 @@ builds_on = ["mafft"]
 
 [[paper]]
 id = "kalign"
-family = 5
+family = 3
 order = 12
 short = "Kalign"
 authors = "Lassmann, Sonnhammer"
@@ -924,7 +896,7 @@ status = "todo"
 
 [[paper]]
 id = "parttree"
-family = 5
+family = 3
 order = 13
 short = "PartTree"
 authors = "Katoh, Toh"
@@ -937,7 +909,7 @@ status = "todo"
 
 [[paper]]
 id = "katoh2008"
-family = 5
+family = 3
 order = 14
 authors = "Katoh, Toh"
 year = "2008"
@@ -949,7 +921,7 @@ status = "todo"
 
 [[paper]]
 id = "kalign2"
-family = 5
+family = 3
 order = 15
 short = "Kalign2"
 authors = "Lassmann et al."
@@ -963,7 +935,7 @@ builds_on = ["kalign"]
 
 [[paper]]
 id = "clustal-omega"
-family = 5
+family = 3
 order = 16
 short = "Clustal Omega"
 authors = "Sievers et al."
@@ -976,7 +948,7 @@ status = "todo"
 
 [[paper]]
 id = "mafft7"
-family = 5
+family = 3
 order = 17
 short = "MAFFT 7"
 authors = "Katoh, Standley"
@@ -990,7 +962,7 @@ builds_on = ["mafft"]
 
 [[paper]]
 id = "yamada2016"
-family = 5
+family = 3
 order = 18
 authors = "Yamada, Tomii, Katoh"
 year = "2016"
@@ -1002,7 +974,7 @@ status = "todo"
 
 [[paper]]
 id = "famsa"
-family = 5
+family = 3
 order = 19
 short = "FAMSA"
 authors = "Deorowicz et al."
@@ -1015,7 +987,7 @@ status = "todo"
 
 [[paper]]
 id = "kalign3"
-family = 5
+family = 3
 order = 20
 short = "Kalign 3"
 authors = "Lassmann"
@@ -1029,7 +1001,7 @@ builds_on = ["kalign2"]
 
 [[paper]]
 id = "famsa2"
-family = 5
+family = 3
 order = 21
 short = "FAMSA2"
 authors = "Gudyś et al."
@@ -1041,14 +1013,12 @@ root = "Famsa2"
 status = "todo"
 builds_on = ["famsa"]
 
-# ---------------------------------------------------------------------------------------------
-# 6. Consistency-based, posterior-probability and graph-based alignment
-# ---------------------------------------------------------------------------------------------
+# Consistency-based, posterior-probability and graph-based alignment
 
 [[paper]]
 id = "morgenstern1996"
-family = 6
-order = 1
+family = 3
+order = 22
 short = "DIALIGN"
 authors = "Morgenstern, Dress, Werner"
 year = "1996"
@@ -1060,8 +1030,8 @@ status = "todo"
 
 [[paper]]
 id = "dialign2"
-family = 6
-order = 2
+family = 3
+order = 23
 short = "DIALIGN 2"
 authors = "Morgenstern"
 year = "1999"
@@ -1074,8 +1044,8 @@ builds_on = ["morgenstern1996"]
 
 [[paper]]
 id = "t-coffee"
-family = 6
-order = 3
+family = 3
+order = 24
 short = "T-Coffee"
 authors = "Notredame, Higgins, Heringa"
 year = "2000"
@@ -1087,8 +1057,8 @@ status = "todo"
 
 [[paper]]
 id = "lee2002"
-family = 6
-order = 4
+family = 3
+order = 25
 short = "POA"
 authors = "Lee, Grasso, Sharlow"
 year = "2002"
@@ -1100,8 +1070,8 @@ status = "todo"
 
 [[paper]]
 id = "lee2003"
-family = 6
-order = 5
+family = 3
+order = 26
 authors = "Lee"
 year = "2003"
 title = "Generating Consensus Sequences from Partial Order Multiple Sequence Alignment Graphs"
@@ -1113,8 +1083,8 @@ builds_on = ["lee2002"]
 
 [[paper]]
 id = "probcons"
-family = 6
-order = 6
+family = 3
+order = 27
 short = "ProbCons"
 authors = "Do et al."
 year = "2005"
@@ -1126,8 +1096,8 @@ status = "todo"
 
 [[paper]]
 id = "probalign"
-family = 6
-order = 7
+family = 3
+order = 28
 short = "Probalign"
 authors = "Roshan, Livesay"
 year = "2006"
@@ -1139,8 +1109,8 @@ status = "todo"
 
 [[paper]]
 id = "mummals"
-family = 6
-order = 8
+family = 3
+order = 29
 short = "MUMMALS"
 authors = "Pei, Grishin"
 year = "2006"
@@ -1152,8 +1122,8 @@ status = "todo"
 
 [[paper]]
 id = "wheeler2007"
-family = 6
-order = 9
+family = 3
+order = 30
 short = "Opal"
 authors = "Wheeler, Kececioglu"
 year = "2007"
@@ -1165,8 +1135,8 @@ status = "todo"
 
 [[paper]]
 id = "pecan"
-family = 6
-order = 10
+family = 3
+order = 31
 short = "Pecan"
 authors = "Paten et al."
 year = "2008"
@@ -1179,8 +1149,8 @@ note = "Pecan is the consistency-based aligner; Enredo, the segmentation of geno
 
 [[paper]]
 id = "fsa"
-family = 6
-order = 11
+family = 3
+order = 32
 short = "FSA"
 authors = "Bradley et al."
 year = "2009"
@@ -1192,8 +1162,8 @@ status = "todo"
 
 [[paper]]
 id = "dialign-tx"
-family = 6
-order = 12
+family = 3
+order = 33
 short = "DIALIGN-TX"
 authors = "Subramanian et al."
 year = "2008"
@@ -1206,8 +1176,8 @@ builds_on = ["dialign2"]
 
 [[paper]]
 id = "msaprobs"
-family = 6
-order = 13
+family = 3
+order = 34
 short = "MSAProbs"
 authors = "Liu, Schmidt, Maskell"
 year = "2010"
@@ -1219,8 +1189,8 @@ status = "todo"
 
 [[paper]]
 id = "quickprobs"
-family = 6
-order = 14
+family = 3
+order = 35
 short = "QuickProbs"
 authors = "Gudyś, Deorowicz"
 year = "2014"
@@ -1233,8 +1203,8 @@ builds_on = ["msaprobs"]
 
 [[paper]]
 id = "muscle5"
-family = 6
-order = 15
+family = 3
+order = 36
 short = "Muscle5"
 authors = "Edgar"
 year = "2022"
@@ -1245,12 +1215,14 @@ root = "Muscle5"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 7. Pairwise alignment and dynamic programming foundations
+# 4. Alignment optimization
 # ---------------------------------------------------------------------------------------------
+
+# Pairwise alignment and dynamic programming foundations
 
 [[paper]]
 id = "needleman1970"
-family = 7
+family = 4
 order = 1
 authors = "Needleman, Wunsch"
 year = "1970"
@@ -1262,7 +1234,7 @@ status = "todo"
 
 [[paper]]
 id = "wagner1974"
-family = 7
+family = 4
 order = 2
 authors = "Wagner, Fischer"
 year = "1974"
@@ -1274,7 +1246,7 @@ status = "todo"
 
 [[paper]]
 id = "hirschberg1975"
-family = 7
+family = 4
 order = 3
 authors = "Hirschberg"
 year = "1975"
@@ -1286,7 +1258,7 @@ status = "todo"
 
 [[paper]]
 id = "waterman1976"
-family = 7
+family = 4
 order = 4
 authors = "Waterman, Smith, Beyer"
 year = "1976"
@@ -1298,7 +1270,7 @@ status = "todo"
 
 [[paper]]
 id = "smith1981"
-family = 7
+family = 4
 order = 5
 authors = "Smith, Waterman"
 year = "1981"
@@ -1310,7 +1282,7 @@ status = "todo"
 
 [[paper]]
 id = "gotoh1982"
-family = 7
+family = 4
 order = 6
 authors = "Gotoh"
 year = "1982"
@@ -1322,7 +1294,7 @@ status = "todo"
 
 [[paper]]
 id = "ukkonen1985"
-family = 7
+family = 4
 order = 7
 authors = "Ukkonen"
 year = "1985"
@@ -1334,7 +1306,7 @@ status = "todo"
 
 [[paper]]
 id = "myers1988"
-family = 7
+family = 4
 order = 8
 authors = "Myers, Miller"
 year = "1988"
@@ -1346,7 +1318,7 @@ status = "todo"
 
 [[paper]]
 id = "miyazawa1995"
-family = 7
+family = 4
 order = 9
 authors = "Miyazawa"
 year = "1995"
@@ -1358,7 +1330,7 @@ status = "todo"
 
 [[paper]]
 id = "myers1999"
-family = 7
+family = 4
 order = 10
 authors = "Myers"
 year = "1999"
@@ -1370,7 +1342,7 @@ status = "todo"
 
 [[paper]]
 id = "backurs2015"
-family = 7
+family = 4
 order = 11
 authors = "Backurs, Indyk"
 year = "2015"
@@ -1382,7 +1354,7 @@ status = "todo"
 
 [[paper]]
 id = "wfa"
-family = 7
+family = 4
 order = 12
 short = "WFA"
 authors = "Marco-Sola et al."
@@ -1395,7 +1367,7 @@ status = "todo"
 
 [[paper]]
 id = "marcosola2023"
-family = 7
+family = 4
 order = 13
 short = "BiWFA"
 authors = "Marco-Sola et al."
@@ -1407,14 +1379,12 @@ root = "MarcoSola2023"
 status = "todo"
 builds_on = ["wfa"]
 
-# ---------------------------------------------------------------------------------------------
-# 8. Exact multiple alignment, computational complexity and approximation algorithms
-# ---------------------------------------------------------------------------------------------
+# Exact multiple alignment, computational complexity and approximation algorithms
 
 [[paper]]
 id = "sankoff1975"
-family = 8
-order = 1
+family = 4
+order = 14
 authors = "Sankoff"
 year = "1975"
 title = "Minimal Mutation Trees of Sequences"
@@ -1425,8 +1395,8 @@ status = "todo"
 
 [[paper]]
 id = "sankoff1983"
-family = 8
-order = 2
+family = 4
+order = 15
 authors = "Sankoff, Cedergren"
 year = "1983"
 title = "Simultaneous Comparison of Three or More Sequences Related by a Tree"
@@ -1438,8 +1408,8 @@ note = "A chapter of D. Sankoff, J. B. Kruskal (eds.), Time Warps, String Edits,
 
 [[paper]]
 id = "carrillo1988"
-family = 8
-order = 3
+family = 4
+order = 16
 authors = "Carrillo, Lipman"
 year = "1988"
 title = "The Multiple Sequence Alignment Problem in Biology"
@@ -1450,8 +1420,8 @@ status = "todo"
 
 [[paper]]
 id = "altschul1989"
-family = 8
-order = 4
+family = 4
+order = 17
 authors = "Altschul"
 year = "1989"
 title = "Gap Costs for Multiple Sequence Alignment"
@@ -1462,8 +1432,8 @@ status = "todo"
 
 [[paper]]
 id = "altschul1989-stars"
-family = 8
-order = 5
+family = 4
+order = 18
 authors = "Altschul, Lipman"
 year = "1989"
 title = "Trees, Stars, and Multiple Biological Sequence Alignment"
@@ -1474,8 +1444,8 @@ status = "todo"
 
 [[paper]]
 id = "pevzner1992"
-family = 8
-order = 6
+family = 4
+order = 19
 authors = "Pevzner"
 year = "1992"
 title = "Multiple Alignment, Communication Cost, and Graph Matching"
@@ -1486,8 +1456,8 @@ status = "todo"
 
 [[paper]]
 id = "gusfield1993"
-family = 8
-order = 7
+family = 4
+order = 20
 authors = "Gusfield"
 year = "1993"
 title = "Efficient Methods for Multiple Sequence Alignment with Guaranteed Error Bounds"
@@ -1498,8 +1468,8 @@ status = "todo"
 
 [[paper]]
 id = "kececioglu1993"
-family = 8
-order = 8
+family = 4
+order = 21
 authors = "Kececioglu"
 year = "1993"
 title = "The Maximum Weight Trace Problem in Multiple Sequence Alignment"
@@ -1510,8 +1480,8 @@ status = "todo"
 
 [[paper]]
 id = "wang1994"
-family = 8
-order = 9
+family = 4
+order = 22
 authors = "Wang, Jiang"
 year = "1994"
 title = "On the Complexity of Multiple Sequence Alignment"
@@ -1522,8 +1492,8 @@ status = "todo"
 
 [[paper]]
 id = "bafna1997"
-family = 8
-order = 10
+family = 4
+order = 23
 authors = "Bafna, Lawler, Pevzner"
 year = "1997"
 title = "Approximation Algorithms for Multiple Sequence Alignment"
@@ -1534,8 +1504,8 @@ status = "todo"
 
 [[paper]]
 id = "stoye1998"
-family = 8
-order = 11
+family = 4
+order = 24
 authors = "Stoye"
 year = "1998"
 title = "Multiple Sequence Alignment with the Divide-and-Conquer Method"
@@ -1546,8 +1516,8 @@ status = "todo"
 
 [[paper]]
 id = "gestalt"
-family = 8
-order = 12
+family = 4
+order = 25
 short = "GESTALT"
 authors = "Lancia, Ravi"
 year = "1999"
@@ -1559,8 +1529,8 @@ status = "todo"
 
 [[paper]]
 id = "kececioglu2004"
-family = 8
-order = 13
+family = 4
+order = 26
 authors = "Kececioglu, Starrett"
 year = "2004"
 title = "Aligning Alignments Exactly"
@@ -1570,12 +1540,14 @@ root = "Kececioglu2004"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 9. Alignment uncertainty, consensus, accuracy metrics and filtering
+# 5. Alignment quality
 # ---------------------------------------------------------------------------------------------
+
+# Alignment uncertainty, consensus, accuracy metrics and filtering
 
 [[paper]]
 id = "castresana2000"
-family = 9
+family = 5
 order = 1
 short = "Gblocks"
 authors = "Castresana"
@@ -1588,7 +1560,7 @@ status = "todo"
 
 [[paper]]
 id = "cline2002"
-family = 9
+family = 5
 order = 2
 authors = "Cline, Hughey, Karplus"
 year = "2002"
@@ -1600,7 +1572,7 @@ status = "todo"
 
 [[paper]]
 id = "landan2007"
-family = 9
+family = 5
 order = 3
 authors = "Landan, Graur"
 year = "2007"
@@ -1612,7 +1584,7 @@ status = "todo"
 
 [[paper]]
 id = "trimal"
-family = 9
+family = 5
 order = 4
 short = "trimAl"
 authors = "Capella-Gutiérrez, Silla-Martínez, Gabaldón"
@@ -1625,7 +1597,7 @@ status = "todo"
 
 [[paper]]
 id = "misof2009"
-family = 9
+family = 5
 order = 5
 short = "ALISCORE"
 authors = "Misof, Misof"
@@ -1638,7 +1610,7 @@ status = "todo"
 
 [[paper]]
 id = "penn2010"
-family = 9
+family = 5
 order = 6
 short = "GUIDANCE"
 authors = "Penn et al."
@@ -1651,7 +1623,7 @@ status = "todo"
 
 [[paper]]
 id = "bmge"
-family = 9
+family = 5
 order = 7
 short = "BMGE"
 authors = "Criscuolo, Gribaldo"
@@ -1664,7 +1636,7 @@ status = "todo"
 
 [[paper]]
 id = "zorro"
-family = 9
+family = 5
 order = 8
 short = "ZORRO"
 authors = "Wu, Chatterji, Eisen"
@@ -1677,7 +1649,7 @@ status = "todo"
 
 [[paper]]
 id = "fastsp"
-family = 9
+family = 5
 order = 9
 short = "FastSP"
 authors = "Mirarab, Warnow"
@@ -1690,7 +1662,7 @@ status = "todo"
 
 [[paper]]
 id = "tcs"
-family = 9
+family = 5
 order = 10
 short = "TCS"
 authors = "Chang et al."
@@ -1703,7 +1675,7 @@ status = "todo"
 
 [[paper]]
 id = "guidance2"
-family = 9
+family = 5
 order = 11
 short = "GUIDANCE2"
 authors = "Sela et al."
@@ -1717,7 +1689,7 @@ builds_on = ["penn2010"]
 
 [[paper]]
 id = "tan2015"
-family = 9
+family = 5
 order = 12
 authors = "Tan et al."
 year = "2015"
@@ -1729,7 +1701,7 @@ status = "todo"
 
 [[paper]]
 id = "clipkit"
-family = 9
+family = 5
 order = 13
 short = "ClipKIT"
 authors = "Steenwyk et al."
@@ -1740,14 +1712,12 @@ kind = "method"
 root = "ClipKit"
 status = "todo"
 
-# ---------------------------------------------------------------------------------------------
-# 10. Alignment error and its impact on phylogenetic inference
-# ---------------------------------------------------------------------------------------------
+# Alignment error and its impact on phylogenetic inference
 
 [[paper]]
 id = "morrison1997"
-family = 10
-order = 1
+family = 5
+order = 14
 authors = "Morrison, Ellis"
 year = "1997"
 title = "Effects of Nucleotide Sequence Alignment on Phylogeny Estimation: A Case Study of 18S rDNAs of Apicomplexa"
@@ -1758,8 +1728,8 @@ status = "todo"
 
 [[paper]]
 id = "nelesen2008"
-family = 10
-order = 2
+family = 5
+order = 15
 authors = "Nelesen et al."
 year = "2008"
 title = "The Effect of the Guide Tree on Multiple Sequence Alignments and Subsequent Phylogenetic Analyses"
@@ -1770,8 +1740,8 @@ status = "todo"
 
 [[paper]]
 id = "liu2009"
-family = 10
-order = 3
+family = 5
+order = 16
 authors = "Liu et al."
 year = "2009"
 title = "Barking Up the Wrong Treelength: The Impact of Gap Penalty on Alignment and Tree Accuracy"
@@ -1782,8 +1752,8 @@ status = "todo"
 
 [[paper]]
 id = "wang2011"
-family = 10
-order = 4
+family = 5
+order = 17
 authors = "Wang et al."
 year = "2011"
 title = "The Impact of Multiple Protein Sequence Alignment on Phylogenetic Estimation"
@@ -1794,8 +1764,8 @@ status = "todo"
 
 [[paper]]
 id = "liu2012"
-family = 10
-order = 5
+family = 5
+order = 18
 authors = "Liu, Warnow"
 year = "2012"
 title = "Treelength Optimization for Phylogeny Estimation"
@@ -1806,8 +1776,8 @@ status = "todo"
 
 [[paper]]
 id = "warnow2012"
-family = 10
-order = 6
+family = 5
+order = 19
 authors = "Warnow"
 year = "2012"
 title = "Standard Maximum Likelihood Analyses of Alignments with Gaps Can Be Statistically Inconsistent"
@@ -1819,8 +1789,8 @@ note = "Even with the true alignment, maximum likelihood that treats gaps as mis
 
 [[paper]]
 id = "blackburne2012"
-family = 10
-order = 7
+family = 5
+order = 20
 authors = "Blackburne, Whelan"
 year = "2012"
 title = "Measuring the Distance Between Multiple Sequence Alignments"
@@ -1831,8 +1801,8 @@ status = "todo"
 
 [[paper]]
 id = "blackburne2013"
-family = 10
-order = 8
+family = 5
+order = 21
 authors = "Blackburne, Whelan"
 year = "2013"
 title = "Class of Multiple Sequence Alignment Algorithm Affects Genomic Analysis"
@@ -1843,8 +1813,8 @@ status = "todo"
 
 [[paper]]
 id = "boyce2015"
-family = 10
-order = 9
+family = 5
+order = 22
 authors = "Boyce, Sievers, Higgins"
 year = "2015"
 title = "Instability in Progressive Multiple Sequence Alignment Algorithms"
@@ -1855,8 +1825,8 @@ status = "todo"
 
 [[paper]]
 id = "nute2019"
-family = 10
-order = 10
+family = 5
+order = 23
 authors = "Nute, Saleh, Warnow"
 year = "2019"
 title = "Evaluating Statistical Multiple Sequence Alignment in Comparison to Other Alignment Methods on Protein Data Sets"
@@ -1866,12 +1836,14 @@ root = "Nute2019"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 11. RNA, codon and structure-aware alignment
+# 6. General and specialized alignment
 # ---------------------------------------------------------------------------------------------
+
+# RNA, codon and structure-aware alignment
 
 [[paper]]
 id = "sankoff1985"
-family = 11
+family = 6
 order = 1
 authors = "Sankoff"
 year = "1985"
@@ -1883,7 +1855,7 @@ status = "todo"
 
 [[paper]]
 id = "hochsmann2004"
-family = 11
+family = 6
 order = 2
 short = "RNAforester"
 authors = "Höchsmann, Voss, Giegerich"
@@ -1897,7 +1869,7 @@ note = "The multiple alignment of RNA secondary structures in RNAforester. Its p
 
 [[paper]]
 id = "gardner2004"
-family = 11
+family = 6
 order = 3
 authors = "Gardner, Giegerich"
 year = "2004"
@@ -1909,7 +1881,7 @@ status = "todo"
 
 [[paper]]
 id = "promals"
-family = 11
+family = 6
 order = 4
 short = "PROMALS"
 authors = "Pei, Grishin"
@@ -1922,7 +1894,7 @@ status = "todo"
 
 [[paper]]
 id = "will2007"
-family = 11
+family = 6
 order = 5
 short = "LocARNA"
 authors = "Will et al."
@@ -1935,7 +1907,7 @@ status = "todo"
 
 [[paper]]
 id = "katoh2008-ncrna"
-family = 11
+family = 6
 order = 6
 authors = "Katoh, Toh"
 year = "2008"
@@ -1947,7 +1919,7 @@ status = "todo"
 
 [[paper]]
 id = "promals3d"
-family = 11
+family = 6
 order = 7
 short = "PROMALS3D"
 authors = "Pei, Kim, Grishin"
@@ -1961,7 +1933,7 @@ builds_on = ["promals"]
 
 [[paper]]
 id = "r-coffee"
-family = 11
+family = 6
 order = 8
 short = "R-Coffee"
 authors = "Wilm et al."
@@ -1975,7 +1947,7 @@ builds_on = ["t-coffee"]
 
 [[paper]]
 id = "translatorx"
-family = 11
+family = 6
 order = 9
 short = "TranslatorX"
 authors = "Abascal, Zardoya, Telford"
@@ -1988,7 +1960,7 @@ status = "todo"
 
 [[paper]]
 id = "macse"
-family = 11
+family = 6
 order = 10
 short = "MACSE"
 authors = "Ranwez et al."
@@ -2001,7 +1973,7 @@ status = "todo"
 
 [[paper]]
 id = "macse2"
-family = 11
+family = 6
 order = 11
 short = "MACSE v2"
 authors = "Ranwez et al."
@@ -2015,7 +1987,7 @@ builds_on = ["macse"]
 
 [[paper]]
 id = "foldmason"
-family = 11
+family = 6
 order = 12
 short = "FoldMason"
 authors = "Gilchrist, Mirdita, Steinegger"
@@ -2026,14 +1998,12 @@ kind = "method"
 root = "FoldMason"
 status = "todo"
 
-# ---------------------------------------------------------------------------------------------
-# 12. Machine learning and learned statistical alignment models
-# ---------------------------------------------------------------------------------------------
+# Machine learning and learned statistical alignment models
 
 [[paper]]
 id = "contralign"
-family = 12
-order = 1
+family = 6
+order = 13
 short = "CONTRAlign"
 authors = "Do, Gross, Batzoglou"
 year = "2006"
@@ -2045,8 +2015,8 @@ status = "todo"
 
 [[paper]]
 id = "learnmsa"
-family = 12
-order = 2
+family = 6
+order = 14
 short = "learnMSA"
 authors = "Becker, Stanke"
 year = "2022"
@@ -2058,8 +2028,8 @@ status = "todo"
 
 [[paper]]
 id = "learnmsa2"
-family = 12
-order = 3
+family = 6
+order = 15
 short = "learnMSA2"
 authors = "Becker, Stanke"
 year = "2024"
@@ -2072,8 +2042,8 @@ builds_on = ["learnmsa"]
 
 [[paper]]
 id = "babappalign"
-family = 12
-order = 4
+family = 6
+order = 16
 short = "BABAPPAlign"
 authors = "Sinha"
 year = "2026"
@@ -2085,8 +2055,8 @@ status = "todo"
 
 [[paper]]
 id = "aries"
-family = 12
-order = 5
+family = 6
+order = 17
 short = "ARIES"
 authors = "Hoang, Armour-Garb, Singh"
 year = "2026"
