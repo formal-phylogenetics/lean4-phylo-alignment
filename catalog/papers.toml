@@ -486,13 +486,13 @@ id = "andoni2010"
 family = 3
 order = 10
 authors = "Andoni et al."
-year = "2010"
+year = "2012"
 title = "Global Alignment of Molecular Sequences via Ancestral State Reconstruction"
-url = "https://hdl.handle.net/1721.1/74010"
+url = "https://doi.org/10.1016/j.spa.2012.08.004"
 kind = "theory+algorithm"
 root = "Andoni2010"
 status = "todo"
-note = "In Innovations in Computer Science 2010, with no DOI: the link is the paper in MIT's repository. The journal version is Stochastic Processes and their Applications 122 (2012) 3852–3874 (https://doi.org/10.1016/j.spa.2012.08.004)."
+note = "The journal version, in Stochastic Processes and their Applications 122(12) (2012) 3852–3874; a first version appeared in Innovations in Computer Science 2010."
 
 [[paper]]
 id = "westesson2012"

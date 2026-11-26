@@ -92,7 +92,7 @@ are outside the hub.
 - [ ] Lunter et al. (2003), [An Efficient Algorithm for Statistical Multiple Alignment on Arbitrary Phylogenetic Trees](https://doi.org/10.1089/106652703322756122)
 - [ ] Miklós, Lunter, Holmes (2004), [A Long Indel Model for Evolutionary Sequence Alignment](https://doi.org/10.1093/molbev/msh043)
 - [ ] Rivas, Eddy (2008), [Probabilistic Phylogenetic Inference with Insertions and Deletions](https://doi.org/10.1371/journal.pcbi.1000172)
-- [ ] Andoni et al. (2010), [Global Alignment of Molecular Sequences via Ancestral State Reconstruction](https://hdl.handle.net/1721.1/74010)
+- [ ] Andoni et al. (2012), [Global Alignment of Molecular Sequences via Ancestral State Reconstruction](https://doi.org/10.1016/j.spa.2012.08.004)
 - [ ] Westesson et al. (2012), [Accurate Reconstruction of Insertion–Deletion Histories by Statistical Phylogenetics](https://doi.org/10.1371/journal.pone.0034572)
 - [ ] Bouchard-Côté, Jordan (2013), [Evolutionary Inference via the Poisson Indel Process (PIP)](https://doi.org/10.1073/pnas.1220450110)
 - [ ] De Maio (2021), [The Cumulative Indel Model: Fast and Accurate Statistical Evolutionary Alignment](https://doi.org/10.1093/sysbio/syaa050)
