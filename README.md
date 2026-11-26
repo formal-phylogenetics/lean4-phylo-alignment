@@ -57,7 +57,7 @@ are outside the hub.
 
 ### 1. Divide-and-conquer alignment and scalable phylogenetic co-estimation
 
-- [ ] Liu et al. (2009), [SATé: Rapid and Accurate Large-Scale Coestimation of Sequence Alignments and Phylogenetic Trees](https://doi.org/10.1126/science.1171243)
+- [ ] Liu et al. (2009), [Rapid and Accurate Large-Scale Coestimation of Sequence Alignments and Phylogenetic Trees](https://doi.org/10.1126/science.1171243)
 - [ ] Liu et al. (2012), [SATé-II: Very Fast and Accurate Simultaneous Estimation of Multiple Sequence Alignments and Phylogenetic Trees](https://doi.org/10.1093/sysbio/syr095)
 - [ ] Mirarab et al. (2015), [PASTA: Ultra-Large Multiple Sequence Alignment for Nucleotide and Amino-Acid Sequences](https://doi.org/10.1089/cmb.2014.0156)
 - [ ] Nute, Warnow (2016), [Scaling Statistical Multiple Sequence Alignment to Large Datasets](https://doi.org/10.1186/s12864-016-3101-8)
@@ -71,9 +71,9 @@ are outside the hub.
 - [ ] Krogh et al. (1994), [Hidden Markov Models in Computational Biology: Applications to Protein Modeling](https://doi.org/10.1006/jmbi.1994.1104)
 - [ ] Eddy (1998), [Profile Hidden Markov Models](https://doi.org/10.1093/bioinformatics/14.9.755)
 - [ ] Eddy (2011), [Accelerated Profile HMM Searches](https://doi.org/10.1371/journal.pcbi.1002195)
-- [ ] Berger, Stamatakis (2011), [PaPaRa: Aligning Short Reads to Reference Alignments and Trees](https://doi.org/10.1093/bioinformatics/btr320)
+- [ ] Berger, Stamatakis (2011), [Aligning Short Reads to Reference Alignments and Trees](https://doi.org/10.1093/bioinformatics/btr320)
 - [ ] Katoh, Frith (2012), [Adding Unaligned Sequences into an Existing Alignment Using MAFFT and LAST](https://doi.org/10.1093/bioinformatics/bts578)
-- [ ] Nguyen et al. (2015), [UPP: Ultra-Large Alignments Using Phylogeny-Aware Profiles](https://doi.org/10.1186/s13059-015-0688-z)
+- [ ] Nguyen et al. (2015), [Ultra-Large Alignments Using Phylogeny-Aware Profiles](https://doi.org/10.1186/s13059-015-0688-z)
 - [ ] Shen, Zaharias, Warnow (2022), [MAGUS+eHMMs: Improved Multiple Sequence Alignment Accuracy for Fragmentary Sequences](https://doi.org/10.1093/bioinformatics/btab788)
 - [ ] Shen, Park, Warnow (2022), [WITCH: Improved Multiple Sequence Alignment Through Weighted Consensus Hidden Markov Model Alignment](https://doi.org/10.1089/cmb.2021.0585)
 - [ ] Park et al. (2023), [UPP2: Fast and Accurate Alignment of Datasets with Fragmentary Sequences](https://doi.org/10.1093/bioinformatics/btad007)
@@ -83,18 +83,18 @@ are outside the hub.
 
 ### 3. Statistical alignment and evolutionary indel models
 
-- [ ] Thorne, Kishino, Felsenstein (1991), [An Evolutionary Model for Maximum Likelihood Alignment of DNA Sequences (TKF91)](https://doi.org/10.1007/BF02193625)
-- [ ] Thorne, Kishino, Felsenstein (1992), [Inching Toward Reality: An Improved Likelihood Model of Sequence Evolution (TKF92)](https://doi.org/10.1007/BF00163848)
+- [ ] Thorne, Kishino, Felsenstein (1991), [An Evolutionary Model for Maximum Likelihood Alignment of DNA Sequences](https://doi.org/10.1007/BF02193625)
+- [ ] Thorne, Kishino, Felsenstein (1992), [Inching Toward Reality: An Improved Likelihood Model of Sequence Evolution](https://doi.org/10.1007/BF00163848)
 - [ ] Hein et al. (2000), [Statistical Alignment: Computational Properties, Homology Testing and Goodness-of-Fit](https://doi.org/10.1006/jmbi.2000.4061)
 - [ ] Steel, Hein (2001), [Applying the Thorne–Kishino–Felsenstein Model to Sequence Evolution on a Star-Shaped Tree](https://doi.org/10.1016/S0893-9659(01)80026-4)
 - [ ] Hein (2001), [An Algorithm for Statistical Alignment of Sequences Related by a Binary Tree](https://doi.org/10.1142/9789814447362_0019)
 - [ ] Holmes, Bruno (2001), [Evolutionary HMMs: A Bayesian Approach to Multiple Alignment](https://doi.org/10.1093/bioinformatics/17.9.803)
 - [ ] Lunter et al. (2003), [An Efficient Algorithm for Statistical Multiple Alignment on Arbitrary Phylogenetic Trees](https://doi.org/10.1089/106652703322756122)
-- [ ] Miklós, Lunter, Holmes (2004), [A Long Indel Model for Evolutionary Sequence Alignment](https://doi.org/10.1093/molbev/msh043)
+- [ ] Miklós, Lunter, Holmes (2004), [A “Long Indel” Model for Evolutionary Sequence Alignment](https://doi.org/10.1093/molbev/msh043)
 - [ ] Rivas, Eddy (2008), [Probabilistic Phylogenetic Inference with Insertions and Deletions](https://doi.org/10.1371/journal.pcbi.1000172)
 - [ ] Andoni et al. (2012), [Global Alignment of Molecular Sequences via Ancestral State Reconstruction](https://doi.org/10.1016/j.spa.2012.08.004)
 - [ ] Westesson et al. (2012), [Accurate Reconstruction of Insertion–Deletion Histories by Statistical Phylogenetics](https://doi.org/10.1371/journal.pone.0034572)
-- [ ] Bouchard-Côté, Jordan (2013), [Evolutionary Inference via the Poisson Indel Process (PIP)](https://doi.org/10.1073/pnas.1220450110)
+- [ ] Bouchard-Côté, Jordan (2013), [Evolutionary Inference via the Poisson Indel Process](https://doi.org/10.1073/pnas.1220450110)
 - [ ] De Maio (2021), [The Cumulative Indel Model: Fast and Accurate Statistical Evolutionary Alignment](https://doi.org/10.1093/sysbio/syaa050)
 
 ### 4. Phylogeny-aware alignment and joint statistical estimation
@@ -108,11 +108,11 @@ are outside the hub.
 - [ ] Fleissner, Metzler, von Haeseler (2005), [Simultaneous Statistical Multiple Alignment and Phylogeny Reconstruction](https://doi.org/10.1080/10635150590950371)
 - [ ] Suchard, Redelings (2006), [BAli-Phy: Simultaneous Bayesian Inference of Alignment and Phylogeny](https://doi.org/10.1093/bioinformatics/btl175)
 - [ ] Redelings, Suchard (2007), [Incorporating Indel Information into Phylogeny Estimation for Rapidly Emerging Pathogens](https://doi.org/10.1186/1471-2148-7-40)
-- [ ] Löytynoja, Goldman (2008), [PRANK: Phylogeny-Aware Gap Placement Prevents Errors in Sequence Alignment and Evolutionary Analysis](https://doi.org/10.1126/science.1158395)
+- [ ] Löytynoja, Goldman (2008), [Phylogeny-Aware Gap Placement Prevents Errors in Sequence Alignment and Evolutionary Analysis](https://doi.org/10.1126/science.1158395)
 - [ ] Löytynoja, Goldman (2008), [A Model of Evolution and Structure for Multiple Sequence Alignment](https://doi.org/10.1098/rstb.2008.0170)
 - [ ] Novák et al. (2008), [StatAlign: An Extendable Software Package for Joint Bayesian Estimation of Alignments and Evolutionary Trees](https://doi.org/10.1093/bioinformatics/btn457)
 - [ ] Varón, Vinh, Wheeler (2010), [POY Version 4: Phylogenetic Analysis Using Dynamic Homologies](https://doi.org/10.1111/j.1096-0031.2009.00282.x)
-- [ ] Löytynoja, Vilella, Goldman (2012), [PAGAN: Accurate Extension of Multiple Sequence Alignments Using a Phylogeny-Aware Graph Algorithm](https://doi.org/10.1093/bioinformatics/bts198)
+- [ ] Löytynoja, Vilella, Goldman (2012), [Accurate Extension of Multiple Sequence Alignments Using a Phylogeny-Aware Graph Algorithm](https://doi.org/10.1093/bioinformatics/bts198)
 - [ ] Redelings (2014), [Erasing Errors Due to Alignment Ambiguity When Estimating Positive Selection](https://doi.org/10.1093/molbev/msu174)
 - [ ] Maiolo et al. (2018), [Progressive Multiple Sequence Alignment with Indel Evolution](https://doi.org/10.1186/s12859-018-2357-1)
 - [ ] Redelings (2021), [BAli-Phy Version 3: Model-Based Co-Estimation of Alignment and Phylogeny](https://doi.org/10.1093/bioinformatics/btab129)
@@ -121,10 +121,10 @@ are outside the hub.
 ### 5. Progressive alignment and iterative refinement
 
 - [ ] Hogeweg, Hesper (1984), [The Alignment of Sets of Sequences and the Construction of Phyletic Trees: An Integrated Method](https://doi.org/10.1007/BF02257378)
-- [ ] Barton, Sternberg (1987), [A Strategy for the Rapid Multiple Alignment of Protein Sequences](https://doi.org/10.1016/0022-2836(87)90316-0)
+- [ ] Barton, Sternberg (1987), [A Strategy for the Rapid Multiple Alignment of Protein Sequences: Confidence Levels from Tertiary Structure Comparisons](https://doi.org/10.1016/0022-2836(87)90316-0)
 - [ ] Feng, Doolittle (1987), [Progressive Sequence Alignment as a Prerequisite to Correct Phylogenetic Trees](https://doi.org/10.1007/BF02603120)
 - [ ] Higgins, Sharp (1988), [CLUSTAL: A Package for Performing Multiple Sequence Alignment on a Microcomputer](https://doi.org/10.1016/0378-1119(88)90330-7)
-- [ ] Corpet (1988), [Multiple Sequence Alignment with Hierarchical Clustering (MultAlin)](https://doi.org/10.1093/nar/16.22.10881)
+- [ ] Corpet (1988), [Multiple Sequence Alignment with Hierarchical Clustering](https://doi.org/10.1093/nar/16.22.10881)
 - [ ] Gotoh (1993), [Optimal Alignment Between Groups of Sequences and Its Application to Multiple Sequence Alignment](https://doi.org/10.1093/bioinformatics/9.3.361)
 - [ ] Thompson, Higgins, Gibson (1994), [CLUSTAL W: Improving the Sensitivity of Progressive Multiple Sequence Alignment Through Sequence Weighting, Position-Specific Gap Penalties and Weight Matrix Choice](https://doi.org/10.1093/nar/22.22.4673)
 - [ ] Katoh et al. (2002), [MAFFT: A Novel Method for Rapid Multiple Sequence Alignment Based on Fast Fourier Transform](https://doi.org/10.1093/nar/gkf436)
@@ -147,17 +147,17 @@ are outside the hub.
 - [ ] Morgenstern, Dress, Werner (1996), [Multiple DNA and Protein Sequence Alignment Based on Segment-to-Segment Comparison](https://doi.org/10.1073/pnas.93.22.12098)
 - [ ] Morgenstern (1999), [DIALIGN 2: Improvement of the Segment-to-Segment Approach to Multiple Sequence Alignment](https://doi.org/10.1093/bioinformatics/15.3.211)
 - [ ] Notredame, Higgins, Heringa (2000), [T-Coffee: A Novel Method for Fast and Accurate Multiple Sequence Alignment](https://doi.org/10.1006/jmbi.2000.4042)
-- [ ] Lee, Grasso, Sharlow (2002), [Multiple Sequence Alignment Using Partial Order Graphs (POA)](https://doi.org/10.1093/bioinformatics/18.3.452)
+- [ ] Lee, Grasso, Sharlow (2002), [Multiple Sequence Alignment Using Partial Order Graphs](https://doi.org/10.1093/bioinformatics/18.3.452)
 - [ ] Lee (2003), [Generating Consensus Sequences from Partial Order Multiple Sequence Alignment Graphs](https://doi.org/10.1093/bioinformatics/btg109)
 - [ ] Do et al. (2005), [ProbCons: Probabilistic Consistency-Based Multiple Sequence Alignment](https://doi.org/10.1101/gr.2821705)
 - [ ] Roshan, Livesay (2006), [Probalign: Multiple Sequence Alignment Using Partition Function Posterior Probabilities](https://doi.org/10.1093/bioinformatics/btl472)
 - [ ] Pei, Grishin (2006), [MUMMALS: Multiple Sequence Alignment Improved by Using Hidden Markov Models with Local Structural Information](https://doi.org/10.1093/nar/gkl514)
-- [ ] Wheeler, Kececioglu (2007), [Multiple Alignment by Aligning Alignments (Opal)](https://doi.org/10.1093/bioinformatics/btm226)
+- [ ] Wheeler, Kececioglu (2007), [Multiple Alignment by Aligning Alignments](https://doi.org/10.1093/bioinformatics/btm226)
 - [ ] Paten et al. (2008), [Enredo and Pecan: Genome-Wide Mammalian Consistency-Based Multiple Alignment with Paralogs](https://doi.org/10.1101/gr.076554.108)
-- [ ] Bradley et al. (2009), [Fast Statistical Alignment (FSA)](https://doi.org/10.1371/journal.pcbi.1000392)
+- [ ] Bradley et al. (2009), [Fast Statistical Alignment](https://doi.org/10.1371/journal.pcbi.1000392)
 - [ ] Subramanian et al. (2008), [DIALIGN-TX: Greedy and Progressive Approaches for Segment-Based Multiple Sequence Alignment](https://doi.org/10.1186/1748-7188-3-6)
 - [ ] Liu, Schmidt, Maskell (2010), [MSAProbs: Multiple Sequence Alignment Based on Pair Hidden Markov Models and Partition Function Posterior Probabilities](https://doi.org/10.1093/bioinformatics/btq338)
-- [ ] Gudyś, Deorowicz (2014), [QuickProbs: A Fast Multiple Sequence Alignment Algorithm Designed for Graphics Processors](https://doi.org/10.1371/journal.pone.0088901)
+- [ ] Gudyś, Deorowicz (2014), [QuickProbs—A Fast Multiple Sequence Alignment Algorithm Designed for Graphics Processors](https://doi.org/10.1371/journal.pone.0088901)
 - [ ] Edgar (2022), [Muscle5: High-Accuracy Alignment Ensembles Enable Unbiased Assessments of Sequence Homology and Phylogeny](https://doi.org/10.1038/s41467-022-34630-w)
 
 ### 7. Pairwise alignment and dynamic programming foundations
@@ -173,8 +173,8 @@ are outside the hub.
 - [ ] Miyazawa (1995), [A Reliable Sequence Alignment Method Based on Probabilities of Residue Correspondences](https://doi.org/10.1093/protein/8.10.999)
 - [ ] Myers (1999), [A Fast Bit-Vector Algorithm for Approximate String Matching Based on Dynamic Programming](https://doi.org/10.1145/316542.316550)
 - [ ] Backurs, Indyk (2015), [Edit Distance Cannot Be Computed in Strongly Subquadratic Time (Unless SETH Is False)](https://doi.org/10.1145/2746539.2746612)
-- [ ] Marco-Sola et al. (2021), [Fast Gap-Affine Pairwise Alignment Using the Wavefront Algorithm (WFA)](https://doi.org/10.1093/bioinformatics/btaa777)
-- [ ] Marco-Sola et al. (2023), [Optimal Gap-Affine Alignment in O(s) Space (BiWFA)](https://doi.org/10.1093/bioinformatics/btad074)
+- [ ] Marco-Sola et al. (2021), [Fast Gap-Affine Pairwise Alignment Using the Wavefront Algorithm](https://doi.org/10.1093/bioinformatics/btaa777)
+- [ ] Marco-Sola et al. (2023), [Optimal Gap-Affine Alignment in O(s) Space](https://doi.org/10.1093/bioinformatics/btad074)
 
 ### 8. Exact multiple alignment, computational complexity and approximation algorithms
 
@@ -194,14 +194,14 @@ are outside the hub.
 
 ### 9. Alignment uncertainty, consensus, accuracy metrics and filtering
 
-- [ ] Castresana (2000), [Selection of Conserved Blocks from Multiple Alignments for Their Use in Phylogenetic Analysis (Gblocks)](https://doi.org/10.1093/oxfordjournals.molbev.a026334)
+- [ ] Castresana (2000), [Selection of Conserved Blocks from Multiple Alignments for Their Use in Phylogenetic Analysis](https://doi.org/10.1093/oxfordjournals.molbev.a026334)
 - [ ] Cline, Hughey, Karplus (2002), [Predicting Reliable Regions in Protein Sequence Alignments](https://doi.org/10.1093/bioinformatics/18.2.306)
 - [ ] Landan, Graur (2007), [Heads or Tails: A Simple Reliability Check for Multiple Sequence Alignments](https://doi.org/10.1093/molbev/msm060)
 - [ ] Capella-Gutiérrez, Silla-Martínez, Gabaldón (2009), [trimAl: A Tool for Automated Alignment Trimming in Large-Scale Phylogenetic Analyses](https://doi.org/10.1093/bioinformatics/btp348)
-- [ ] Misof, Misof (2009), [A Monte Carlo Approach Successfully Identifies Randomness in Multiple Sequence Alignments: A More Objective Means of Data Exclusion (ALISCORE)](https://doi.org/10.1093/sysbio/syp006)
-- [ ] Penn et al. (2010), [An Alignment Confidence Score Capturing Robustness to Guide Tree Uncertainty (GUIDANCE)](https://doi.org/10.1093/molbev/msq066)
+- [ ] Misof, Misof (2009), [A Monte Carlo Approach Successfully Identifies Randomness in Multiple Sequence Alignments: A More Objective Means of Data Exclusion](https://doi.org/10.1093/sysbio/syp006)
+- [ ] Penn et al. (2010), [An Alignment Confidence Score Capturing Robustness to Guide Tree Uncertainty](https://doi.org/10.1093/molbev/msq066)
 - [ ] Criscuolo, Gribaldo (2010), [BMGE (Block Mapping and Gathering with Entropy): A New Software for Selection of Phylogenetic Informative Regions from Multiple Sequence Alignments](https://doi.org/10.1186/1471-2148-10-210)
-- [ ] Wu, Chatterji, Eisen (2012), [ZORRO: Accounting for Alignment Uncertainty in Phylogenomics](https://doi.org/10.1371/journal.pone.0030288)
+- [ ] Wu, Chatterji, Eisen (2012), [Accounting for Alignment Uncertainty in Phylogenomics](https://doi.org/10.1371/journal.pone.0030288)
 - [ ] Mirarab, Warnow (2011), [FastSP: Linear-Time Calculation of Alignment Accuracy](https://doi.org/10.1093/bioinformatics/btr553)
 - [ ] Chang et al. (2014), [TCS: A New Multiple Sequence Alignment Reliability Measure to Estimate Alignment Accuracy and Improve Phylogenetic Tree Reconstruction](https://doi.org/10.1093/molbev/msu117)
 - [ ] Sela et al. (2015), [GUIDANCE2: Accurate Detection of Unreliable Alignment Regions Accounting for the Uncertainty of Multiple Parameters](https://doi.org/10.1093/nar/gkv318)
@@ -227,7 +227,7 @@ are outside the hub.
 - [ ] Höchsmann, Voss, Giegerich (2004), [Pure Multiple RNA Secondary Structure Alignments: A Progressive Profile Approach](https://doi.org/10.1109/TCBB.2004.11)
 - [ ] Gardner, Giegerich (2004), [A Comprehensive Comparison of Comparative RNA Structure Prediction Approaches](https://doi.org/10.1186/1471-2105-5-140)
 - [ ] Pei, Grishin (2007), [PROMALS: Towards Accurate Multiple Sequence Alignments of Distantly Related Proteins](https://doi.org/10.1093/bioinformatics/btm017)
-- [ ] Will et al. (2007), [Inferring Noncoding RNA Families and Classes by Means of Genome-Scale Structure-Based Clustering (LocARNA)](https://doi.org/10.1371/journal.pcbi.0030065)
+- [ ] Will et al. (2007), [Inferring Noncoding RNA Families and Classes by Means of Genome-Scale Structure-Based Clustering](https://doi.org/10.1371/journal.pcbi.0030065)
 - [ ] Katoh, Toh (2008), [Improved Accuracy of Multiple ncRNA Alignment by Incorporating Structural Information into a MAFFT-Based Framework](https://doi.org/10.1186/1471-2105-9-212)
 - [ ] Pei, Kim, Grishin (2008), [PROMALS3D: A Tool for Multiple Protein Sequence and Structure Alignments](https://doi.org/10.1093/nar/gkn072)
 - [ ] Wilm et al. (2008), [R-Coffee: A Method for Multiple Alignment of Non-Coding RNA](https://doi.org/10.1093/nar/gkn174)
